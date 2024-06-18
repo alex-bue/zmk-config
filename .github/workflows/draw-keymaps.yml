@@ -3,6 +3,8 @@ name: Draw ZMK keymaps
 on:
   workflow_dispatch:  # can be triggered manually
   push:               # automatically run on changes to following paths
+    branches:
+      - main
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
