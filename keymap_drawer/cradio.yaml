@@ -139,7 +139,7 @@ layers:
   - {type: held}
   - {type: trans}
   - {type: trans}
-  - {type: held}
+  - {type: trans}
 combos:
 - p: [7, 8]
   k: BSPC
