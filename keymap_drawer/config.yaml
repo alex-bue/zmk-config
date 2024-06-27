@@ -79,7 +79,7 @@ parse_config:
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
-  mark_alternate_layer_activators: true
+  mark_alternate_layer_activators: false
   trans_legend:
     tap: ''
     type: trans
