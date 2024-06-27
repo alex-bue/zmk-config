@@ -62,6 +62,13 @@
           bindings = <&kp LG(SPACE)>;
           layers = <0>;
         };
+
+        /* Caps word */
+        combo_caps_word {
+          timeout-ms = <VERT_COMBO_MS>;
+          key-positions = <13 16>;
+          bindings = <&caps_word>;
+        };
     };
 };
 
