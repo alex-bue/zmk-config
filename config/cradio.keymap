@@ -20,6 +20,7 @@
 #define SYM 1
 #define NUM 2
 #define NAV 3
+#define TRI 4
 
 // Key positions reference
 //   ╭────────────────────╮ ╭────────────────────╮
@@ -84,11 +85,19 @@
             bindings = <&kp>, <&kp>;
         };
 
-        td_reset: tap_dance_reset {
+        td_bootloader: tap_dance_reset {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&bootloader>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 
@@ -125,8 +134,17 @@
             bindings = <
             &kp LA(N1)  &kp LA(N2) &kp LA(N3) &kp LA(N4)  &kp LA(N5)          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP  &kp C_NEXT  &kp C_MUTE
             &kp LCTRL   &kp LALT   &kp LGUI   &kp LSFT    &trans              &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT   &kp C_PLAY_PAUSE
-            &td_reset   &trans     &trans     &trans      &trans              &trans     &kp C_BRI_DN &kp C_BRI_UP  &trans      &td_reset
+            &trans      &trans     &trans     &trans      &trans              &trans     &kp C_BRI_DN &kp C_BRI_UP  &trans      &trans
                                               &trans      &trans              &trans     &trans
+            >;
+        };
+
+        tri_layer {
+            bindings = <
+            &trans          &trans  &trans  &trans  &trans    &kp C_PREV    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT    &kp C_MUTE
+            &trans          &trans  &trans  &trans  &trans    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+            &td_bootloader  &trans  &trans  &trans  &trans    &out OUT_TOG  &kp C_BRI_UP  &kp C_BRI_DN  &trans        &td_bootloader
+                                            &trans  &trans    &trans        &trans
             >;
         };
     };
