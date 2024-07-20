@@ -126,7 +126,7 @@ layers:
   - UP
   - RIGHT
   - PLAY PAUSE
-  - td_reset
+  - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -135,10 +135,45 @@ layers:
   - BRI DN
   - BRI UP
   - {type: trans}
-  - td_reset
+  - {type: trans}
   - {type: held}
   - {type: trans}
   - {type: trans}
+  - {type: trans}
+  tri:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - MUTE
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - '&td_bootloader'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - OUT TOG
+  - BRI UP
+  - BRI DN
+  - {type: trans}
+  - '&td_bootloader'
+  - {type: trans}
+  - {type: held}
+  - {type: held}
   - {type: trans}
 combos:
 - p: [7, 8]
