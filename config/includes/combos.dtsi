@@ -1,0 +1,53 @@
+#define COMBO_TERM_FAST 35
+#define COMBO_TERM_SLOW 40
+#define COMBO_PRIOR_IDLE 150
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_bspc {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <7 8>;
+          bindings = <&kp BSPC>;
+        };
+
+        /* White Space */
+        combo_del {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <17 18>;
+          bindings = <&kp DEL>;
+        };
+        combo_tab {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <1 2>;
+          bindings = <&kp TAB>;
+        };
+        combo_esc {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <11 12>;
+          bindings = <&kp ESC>;
+        };
+
+        /* System */
+        combo_alfred {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <11 12 13>;
+          bindings = <&kp LG(SPACE)>;
+          layers = <0>;
+        };
+
+        /* Caps word */
+        combo_caps_word {
+          timeout-ms = <COMBO_TERM_FAST>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <13 16>;
+          bindings = <&caps_word>;
+        };
+    };
+};
