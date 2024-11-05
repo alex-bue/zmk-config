@@ -65,7 +65,7 @@
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB3 LB1>;
-          bindings = <&kp LC(x)>;
+          bindings = <&kp LC(X)>;
         };
         
         combo_paste {
