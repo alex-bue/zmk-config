@@ -18,8 +18,8 @@ layers:
   - G
   - H
   - {t: J, h: LSFT}
-  - {t: K, h: LGUI}
-  - {t: L, h: LALT}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
   - {t: '''', h: LCTRL}
   - {t: Z, h: RALT}
   - X
