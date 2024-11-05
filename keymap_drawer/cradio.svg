@@ -82,6 +82,10 @@ text.shifted {
     dominant-baseline: hanging;
 }
 
+text.layer-activator {
+    text-decoration: underline;
+}
+
 /* styling for hold/shifted label text in combo box */
 text.combo.hold, text.combo.shifted {
     font-size: 8px;
@@ -134,7 +138,7 @@ text {
 }
 </style>
 <g transform="translate(30, 0)" class="layer-default">
-<text x="0" y="28" class="label">default:</text>
+<text x="0" y="28" class="label" id="default">default:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 80)" class="key keypos-0">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
@@ -269,27 +273,31 @@ text {
 <g transform="translate(217, 217) rotate(15.0)" class="key keypos-30">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">TAB</text>
-<text x="0" y="20" class="key hold"><tspan style="font-size: 62%">navigat…</tspan></text>
-</g>
+<a href="#navigation">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 62%">navigat…</tspan></text>
+</a></g>
 <g transform="translate(274, 240) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">ESC</text>
-<text x="0" y="20" class="key hold"><tspan style="font-size: 71%">symbols</tspan></text>
-</g>
+<a href="#symbols">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 71%">symbols</tspan></text>
+</a></g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
-<text x="0" y="20" class="key hold"><tspan style="font-size: 71%">numbers</tspan></text>
-</g>
+<a href="#numbers">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 71%">numbers</tspan></text>
+</a></g>
 <g transform="translate(443, 217) rotate(-15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="20" class="key hold"><tspan style="font-size: 62%">navigat…</tspan></text>
-</g>
+<a href="#navigation">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 62%">navigat…</tspan></text>
+</a></g>
 </g>
 </g>
 <g transform="translate(30, 334)" class="layer-symbols">
-<text x="0" y="28" class="label">symbols:</text>
+<text x="0" y="28" class="label" id="symbols">symbols:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 80)" class="key keypos-0">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
@@ -424,7 +432,7 @@ text {
 </g>
 </g>
 <g transform="translate(30, 668)" class="layer-numbers">
-<text x="0" y="28" class="label">numbers:</text>
+<text x="0" y="28" class="label" id="numbers">numbers:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 80)" class="key keypos-0">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
@@ -549,7 +557,7 @@ text {
 </g>
 </g>
 <g transform="translate(30, 1001)" class="layer-navigation">
-<text x="0" y="28" class="label">navigation:</text>
+<text x="0" y="28" class="label" id="navigation">navigation:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 80)" class="key keypos-0">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
@@ -697,7 +705,7 @@ text {
 </g>
 </g>
 <g transform="translate(30, 1335)" class="layer-tri">
-<text x="0" y="28" class="label">tri:</text>
+<text x="0" y="28" class="label" id="tri">tri:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 80)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
@@ -834,7 +842,7 @@ text {
 </g>
 </g>
 </g>
-<text x="30" y="1697" class="label">Combos:</text>
+<text x="30" y="1697" class="label" id="Combos">Combos:</text>
 <g transform="translate(30, 1669)" class="layer-combopos-0">
 <g transform="translate(0, 56)">
 <g transform="translate(28, 28)" class="key  combo-separate keypos-0">
