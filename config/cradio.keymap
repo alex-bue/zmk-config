@@ -35,10 +35,10 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-            &kp Q           &kp W       &kp E       &kp R             &kp T         &kp Y          &kp U                 &kp I         &kp O         &kp P
-            &hm_l LCTRL A   &hm_l LALT  &hm_l LGUI  &hm_shift_l LSFT  &kp G         &kp H          &hm_shift_r RSHFT J   &hm_r RGUI K  &hm_r RALT L  &hm_r LCTRL SQT 
-            &ht RALT Z      &kp X       &kp C       &kp V             &kp B         &kp N          &kp M                 &kp COMMA     &kp DOT       &ht RALT FSLH
-                                                    &lt NAV TAB       &lt SYM ESC   &lt NUM ENTER  &lt NAV SPACE
+            &kp Q           &kp W         &kp E         &kp R               &kp T         &kp Y          &kp U                &kp I         &kp O         &kp P
+            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSFT F  &kp G         &kp H          &hm_shift_r LSFT J   &hm_r RGUI K  &hm_r RALT L  &hm_r LCTRL SQT
+            &ht RALT Z      &kp X         &kp C         &kp V               &kp B         &kp N          &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+                                                        &lt NAV TAB         &lt SYM ESC   &lt NUM ENTER  &lt NAV SPACE
             >;
         };
 
