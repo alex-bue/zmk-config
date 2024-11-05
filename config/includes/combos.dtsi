@@ -20,14 +20,14 @@
         combo_bspc {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <RT3 RT4>;
+          key-positions = <RT2 RT3>;
           bindings = <&kp BSPC>;
         };
 
         combo_del {
           timeout-ms = <COMBO_TERM_FAST>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <RT2 RT3>;
+          key-positions = <RT1 RT2>;
           bindings = <&kp DEL>;
         };
 
