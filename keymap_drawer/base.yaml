@@ -1,0 +1,190 @@
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSFT}
+  - G
+  - H
+  - {t: J, h: LSFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
+  - {t: '''', h: LCTRL}
+  - {t: Z, h: RALT}
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: RALT}
+  - {t: TAB, h: navigation}
+  - {t: ESC, h: symbols}
+  - {t: ENTER, h: numbers}
+  - {t: SPACE, h: navigation}
+  symbols:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '='
+  - '`'
+  - (
+  - )
+  - +
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSFT
+  - ^
+  - '*'
+  - ':'
+  - '['
+  - ']'
+  - '-'
+  - {type: trans}
+  - {type: trans}
+  - BSLH
+  - '|'
+  - '&'
+  - '~'
+  - ;
+  - '['
+  - ']'
+  - _
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  numbers:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSFT
+  - {type: trans}
+  - {type: trans}
+  - LSFT
+  - LGUI
+  - LALT
+  - LCTRL
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  navigation:
+  - Alt+ 1
+  - Alt+ 2
+  - Alt+ 3
+  - Alt+ 4
+  - Alt+ 5
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - MUTE
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSFT
+  - {type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - PLAY PAUSE
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - BRI DN
+  - BRI UP
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  tri:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - MUTE
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - '&td_bootloader'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - OUT TOG
+  - BRI UP
+  - BRI DN
+  - {type: trans}
+  - '&td_bootloader'
+  - {type: trans}
+  - {type: held}
+  - {type: held}
+  - {type: trans}
+combos:
+- p: [7, 8]
+  k: BSPC
+- p: [17, 18]
+  k: DEL
+- p: [1, 2]
+  k: TAB
+- p: [11, 12]
+  k: ESC
+- p: [11, 12, 13]
+  k: Gui+ SPACE
+  l: [default]
+- p: [13, 16]
+  k: '&caps_word'
