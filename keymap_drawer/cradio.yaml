@@ -34,7 +34,7 @@ layers:
   - {t: TAB, h: navigation}
   - {t: ESC, h: symbols}
   - {t: ENTER, h: numbers}
-  - {t: SPACE, h: navigation}
+  - {t: SPACE, h: fn}
   symbols:
   - '!'
   - '@'
@@ -111,11 +111,11 @@ layers:
   - Alt+ 3
   - Alt+ 4
   - Alt+ 5
-  - PREV
-  - VOL DN
-  - VOL UP
-  - NEXT
-  - MUTE
+  - HOME
+  - PG DN
+  - PG UP
+  - BSPC
+  - DEL
   - LCTRL
   - LALT
   - LGUI
@@ -125,32 +125,67 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - PLAY PAUSE
   - {type: trans}
   - {type: trans}
+  - Gui+ X
+  - Gui+ C
+  - Gui+ V
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - BRI DN
-  - BRI UP
-  - {type: trans}
+  - END
+  - Gui+ V
+  - Gui+ C
+  - Gui+ X
   - {type: trans}
   - {type: held}
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  tri:
+  fn:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - {type: trans}
+  - PLAY PAUSE
+  - MUTE
   - {type: trans}
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
   - PREV
   - VOL DN
   - VOL UP
   - NEXT
-  - MUTE
+  - {type: trans}
+  - F11
+  - F12
+  - F13
+  - F14
+  - F15
+  - {type: trans}
+  - BRI DN
+  - BRI UP
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  sys:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -167,8 +202,8 @@ layers:
   - {type: trans}
   - {type: trans}
   - OUT TOG
-  - BRI UP
-  - BRI DN
+  - {type: trans}
+  - {type: trans}
   - {type: trans}
   - '&td_bootloader'
   - {type: trans}
