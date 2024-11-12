@@ -11,9 +11,11 @@
 #define BASE 0
 #define SYM 1
 #define NUM 2
-#define NAV 3
-#define FN 4
-#define SYS 5
+#define NUMPAD 3
+#define NAV 4
+#define FN 5
+#define WM 6
+#define SYS 7
 
 // Personal includes
 #include "includes/conditional_layers.dtsi"
@@ -28,8 +30,8 @@
         default_layer {
             bindings = <
             &kp Q           &kp W         &kp E         &kp R               &kp T         &kp Y          &kp U                &kp I         &kp O         &kp P
-            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSFT F  &kp G         &kp H          &hm_shift_r LSFT J   &hm_r RGUI K  &hm_r RALT L  &hm_r LCTRL SQT
-            &ht RALT Z      &kp X         &kp C         &kp V               &kp B         &kp N          &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G         &kp H          &hm_shift_r LSHFT J   &hm_r RGUI K  &hm_r RALT L  &hm_r LCTRL SQT
+            &ht WM Z      &kp X         &kp C         &ht NUMPAD V        &kp B         &kp N          &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
                                                         &lt NAV TAB         &lt SYM ESC   &lt NUM ENTER  &lt FN SPACE
             >;
         };
@@ -37,7 +39,7 @@
         symbols_layer {
             bindings = <
             &kp EXCL   &kp AT     &kp HASH   &kp DOLLAR  &kp PERCENT          &kp EQUAL  &kp GRAVE  &kp LPAR  &kp RPAR   &kp PLUS
-            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSFT    &kp CARET            &kp ASTRK  &kp COLON  &kp LBKT  &kp RBKT   &kp MINUS
+            &kp LCTRL  &kp LALT   &kp LGUI   &kp LSHFT   &kp CARET            &kp ASTRK  &kp COLON  &kp LBKT  &kp RBKT   &kp MINUS
             &trans     &trans     &kp BSLH   &kp PIPE    &kp AMPS             &kp TILDE  &kp SEMI   &kp LBRC  &kp RBRC   &kp UNDER
                                              &trans      &trans               &trans     &trans
             >;
@@ -46,18 +48,36 @@
         numbers_layer {
             bindings = <
             &kp N1     &kp N2    &kp N3      &kp N4    &kp N5                 &kp N6     &kp N7     &kp N8    &kp N9     &kp N0
-            &kp LCTRL  &kp LALT  &kp LGUI    &kp LSFT  &trans                 &trans     &kp LSFT   &kp LGUI  &kp LALT   &kp LCTRL
+            &kp LCTRL  &kp LALT  &kp LGUI    &kp LSHFT  &trans                 &trans     &kp LSHFT   &kp LGUI  &kp LALT   &kp LCTRL
             &trans     &trans    &trans      &trans    &trans                 &trans     &trans     &trans    &trans     &trans
                                              &trans    &trans                 &trans     &trans
+            >;
+        };
+
+        numpad_layer {
+            bindings = <
+            &trans     &trans    &trans    &trans    &trans    &kp FSLH   &kp N7  &kp N8  &kp N9  &kp PLUS
+            &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT &trans    &kp ASTRK  &kp N4  &kp N5  &kp N6  &kp MINUS
+            &trans     &trans    &trans    &trans    &trans    &kp COMMA  &kp N1  &kp N2  &kp N3  &kp DOT
+                                           &trans    &trans    &kp N0     &trans
             >;
         };
 
         navigation_layer {
             bindings = <
             &kp LA(N1)  &kp LA(N2)  &kp LA(N3)    &kp LA(N4)  &kp LA(N5)          &kp HOME   &kp PG_DN    &kp PG_UP     &kp BSPC    &kp DEL
-            &kp LCTRL   &kp LALT    &kp LGUI      &kp LSFT    &trans              &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT   &trans
-            &trans      &kp LG(X) &kp LG(C)   &kp LG(V) &trans              &kp END    &kp LG(V)  &kp LG(C)   &kp LG(X) &trans
+            &kp LCTRL   &kp LALT    &kp LGUI      &kp LSHFT   &trans              &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT   &trans
+            &trans      &kp LG(X)   &kp LG(C)     &kp LG(V)   &trans              &kp END    &kp LG(V)    &kp LG(C)     &kp LG(X)   &trans
                                                   &trans      &trans              &trans     &trans
+            >;
+        };
+
+        wm_layer {
+            bindings = <
+            &trans     &trans    &trans    &trans     &trans    &kp LA(TAB)      &trans      &trans      &trans      &kp LA(LS(EQUAL))
+            &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans    &trans           &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(LS(MINUS))
+            &trans     &trans    &trans    &trans     &trans    &trans           &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(LS(N0))
+                                           &trans     &trans    &kp LS(LA(SEMI)) &trans
             >;
         };
 
@@ -69,16 +89,6 @@
                                               &trans      &trans              &trans     &trans
             >;
         };
-        
-        // todo: to be done based on aerospace
-        //window_manager_layer {
-        //    bindings = <
-        //    &kp LA(N1)  &kp LA(N2) &kp LA(N4) &kp LA(N5)  &kp LA(N5)         &kp LA(N1) &kp LA(N2)   &kp LA(N3)    &kp LA(N4)  &kp LA(N5)
-        //    &kp LCTRL   &kp LA(S)  &trans     &kp LSFT    &trans              &kp H   &kp J     &kp K        &kp L   &trans
-        //    &trans      &trans     &trans     &trans      &trans              &trans     &kp C_BRI_DN &kp C_BRI_UP  &trans      &trans
-        //                                      &trans      &trans              &trans     &trans
-        //    >;
-        //};
 
         sys_layer {
             bindings = <
