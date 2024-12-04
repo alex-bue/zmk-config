@@ -38,9 +38,9 @@
 
         symbols_layer {
             bindings = <
-            &trans     &kp LT     &kp GT     &kp BSLH    &kp GRAVE         &kp AMPS  &kp GRAVE  &kp LPAR  &kp RPAR   &kp UNDER
-            &kp EXCL   &kp MINUS  &kp PLUS   &kp EQUAL   &kp HASH          &kp PIPE  &kp COLON  &kp LBKT  &kp RBKT   &kp PERCENT
-            &trans     &kp SLASH  &kp ASTRK  &kp CARET   &kp AMPS          &kp TILDE &kp DOLLAR &kp LBRC  &kp RBRC   &kp AT
+            &trans     &kp LT     &kp GT     &kp BSLH    &kp GRAVE         &kp AMPS  &kp GRAVE  &kp LPAR  &kp RPAR   &kp PERCENT
+            &kp EXCL   &kp MINUS  &kp PLUS   &kp EQUAL   &kp HASH          &kp PIPE  &kp COLON  &kp LBKT  &kp RBKT   &kp DOLLAR
+            &trans     &kp SLASH  &kp ASTRK  &kp CARET   &kp AMPS          &kp TILDE &kp SEMI &kp LBRC  &kp RBRC   &kp AT
                                              &trans      &trans            &trans    &trans
             >;
         };
