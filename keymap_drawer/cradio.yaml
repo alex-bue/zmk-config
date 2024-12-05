@@ -14,17 +14,17 @@ layers:
   - {t: A, h: LCTRL}
   - {t: S, h: LALT}
   - {t: D, h: LGUI}
-  - {t: F, h: LSFT}
+  - {t: F, h: LSHFT}
   - G
   - H
-  - {t: J, h: LSFT}
+  - {t: J, h: LSHFT}
   - {t: K, h: RGUI}
-  - {t: L, h: RALT}
+  - {t: L, h: LALT}
   - {t: '''', h: LCTRL}
-  - {t: Z, h: RALT}
+  - {t: Z, h: wm}
   - X
   - C
-  - V
+  - {t: V, h: numpad}
   - B
   - N
   - M
@@ -32,40 +32,40 @@ layers:
   - .
   - {t: /, h: RALT}
   - {t: TAB, h: navigation}
-  - {t: ESC, h: symbols}
+  - {t: _, h: symbols}
   - {t: ENTER, h: numbers}
   - {t: SPACE, h: fn}
   symbols:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - '='
+  - {type: trans}
+  - <
+  - '>'
+  - BSLH
+  - '`'
+  - '&'
   - '`'
   - (
   - )
+  - '%'
+  - '!'
+  - '-'
   - +
-  - LCTRL
-  - LALT
-  - LGUI
-  - LSFT
-  - ^
-  - '*'
+  - '='
+  - '#'
+  - '|'
   - ':'
   - '['
   - ']'
-  - '-'
+  - $
   - {type: trans}
-  - {type: trans}
-  - BSLH
-  - '|'
+  - /
+  - '*'
+  - ^
   - '&'
   - '~'
   - ;
   - '['
   - ']'
-  - _
+  - '@'
   - {type: trans}
   - {type: held}
   - {type: trans}
@@ -84,10 +84,10 @@ layers:
   - LCTRL
   - LALT
   - LGUI
-  - LSFT
+  - LSHFT
   - {type: trans}
   - {type: trans}
-  - LSFT
+  - LSHFT
   - LGUI
   - LALT
   - LCTRL
@@ -105,6 +105,41 @@ layers:
   - {type: trans}
   - {type: held}
   - {type: trans}
+  numpad:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - +
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSHFT
+  - {type: trans}
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - '-'
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: held}
+  - {type: trans}
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - .
+  - {type: trans}
+  - {type: trans}
+  - '0'
+  - {type: trans}
   navigation:
   - Alt+ 1
   - Alt+ 2
@@ -114,18 +149,18 @@ layers:
   - HOME
   - PG DN
   - PG UP
-  - BSPC
   - DEL
+  - BSPC
   - LCTRL
   - LALT
   - LGUI
-  - LSFT
+  - LSHFT
   - {type: trans}
   - LEFT
   - DOWN
   - UP
   - RIGHT
-  - {type: trans}
+  - BSPC
   - {type: trans}
   - Gui+ X
   - Gui+ C
@@ -175,6 +210,41 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: held}
+  wm:
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Alt+ TAB
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Alt+Sft+ =
+  - LCTRL
+  - LALT
+  - LGUI
+  - LSHFT
+  - {type: trans}
+  - {type: trans}
+  - Alt+ 1
+  - Alt+ 2
+  - Alt+ 3
+  - Alt+Sft+ -
+  - {type: held}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
+  - Alt+ 4
+  - Alt+ 5
+  - Alt+ 6
+  - Alt+Sft+ 0
+  - {type: trans}
+  - {type: trans}
+  - Sft+Alt+ ;
+  - {type: trans}
   sys:
   - {type: trans}
   - {type: trans}
