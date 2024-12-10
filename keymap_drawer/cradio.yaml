@@ -149,8 +149,8 @@ layers:
   - HOME
   - PG DN
   - PG UP
-  - DEL
   - BSPC
+  - DEL
   - LCTRL
   - LALT
   - LGUI
