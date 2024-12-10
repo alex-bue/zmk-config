@@ -283,25 +283,24 @@ text {
 </g>
 <g transform="translate(217, 217) rotate(15.0)" class="key keypos-30">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
-<text x="0" y="0" class="key tap">TAB</text>
-<a href="#navigation">
-<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 62%">navigat…</tspan></text>
+<text x="0" y="0" class="key tap">ENTER</text>
+<a href="#symbols">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 71%">symbols</tspan></text>
 </a></g>
 <g transform="translate(274, 240) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
-<text x="0" y="0" class="key tap">_</text>
-<a href="#symbols">
-<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 71%">symbols</tspan></text>
+<text x="0" y="0" class="key tap">SPACE</text>
+<a href="#navigation">
+<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 62%">navigat…</tspan></text>
 </a></g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">ENTER</text>
-<a href="#numbers">
-<text x="0" y="20" class="key hold layer-activator"><tspan style="font-size: 71%">numbers</tspan></text>
-</a></g>
+<text x="0" y="20" class="key hold">LSHFT</text>
+</g>
 <g transform="translate(443, 217) rotate(-15.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
-<text x="0" y="0" class="key tap">SPACE</text>
+<text x="0" y="0" class="key tap">_</text>
 <a href="#fn">
 <text x="0" y="20" class="key hold layer-activator">fn</text>
 </a></g>
@@ -428,11 +427,11 @@ text {
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap">@</text>
 </g>
-<g transform="translate(217, 217) rotate(15.0)" class="key trans keypos-30">
-<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
-</g>
-<g transform="translate(274, 240) rotate(30.0)" class="key held keypos-31">
+<g transform="translate(217, 217) rotate(15.0)" class="key held keypos-30">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
+</g>
+<g transform="translate(274, 240) rotate(30.0)" class="key trans keypos-31">
+<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
@@ -559,8 +558,8 @@ text {
 <g transform="translate(274, 240) rotate(30.0)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
-<g transform="translate(386, 240) rotate(-30.0)" class="key held keypos-32">
-<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
+<g transform="translate(386, 240) rotate(-30.0)" class="key trans keypos-32">
+<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
 <g transform="translate(443, 217) rotate(-15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
@@ -839,11 +838,11 @@ text {
 <g transform="translate(632, 190)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
-<g transform="translate(217, 217) rotate(15.0)" class="key held keypos-30">
-<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
-</g>
-<g transform="translate(274, 240) rotate(30.0)" class="key trans keypos-31">
+<g transform="translate(217, 217) rotate(15.0)" class="key trans keypos-30">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
+</g>
+<g transform="translate(274, 240) rotate(30.0)" class="key held keypos-31">
+<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
 </g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
@@ -1246,14 +1245,14 @@ text {
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
 <text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;td_boo…</tspan></text>
 </g>
-<g transform="translate(217, 217) rotate(15.0)" class="key trans keypos-30">
+<g transform="translate(217, 217) rotate(15.0)" class="key held keypos-30">
+<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
+</g>
+<g transform="translate(274, 240) rotate(30.0)" class="key trans keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
-<g transform="translate(274, 240) rotate(30.0)" class="key held keypos-31">
-<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
-</g>
-<g transform="translate(386, 240) rotate(-30.0)" class="key held keypos-32">
-<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key held"/>
+<g transform="translate(386, 240) rotate(-30.0)" class="key trans keypos-32">
+<rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>
 </g>
 <g transform="translate(443, 217) rotate(-15.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key trans"/>

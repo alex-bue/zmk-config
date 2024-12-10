@@ -31,10 +31,10 @@ layers:
   - ','
   - .
   - {t: /, h: RALT}
-  - {t: TAB, h: navigation}
-  - {t: _, h: symbols}
-  - {t: ENTER, h: numbers}
-  - {t: SPACE, h: fn}
+  - {t: ENTER, h: symbols}
+  - {t: SPACE, h: navigation}
+  - {t: ENTER, h: LSHFT}
+  - {t: _, h: fn}
   symbols:
   - {type: trans}
   - <
@@ -66,8 +66,8 @@ layers:
   - '['
   - ']'
   - '@'
-  - {type: trans}
   - {type: held}
+  - {type: trans}
   - {type: trans}
   - {type: trans}
   numbers:
@@ -103,7 +103,7 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - {type: held}
+  - {type: trans}
   - {type: trans}
   numpad:
   - {type: trans}
@@ -171,8 +171,8 @@ layers:
   - Gui+ C
   - Gui+ X
   - {type: trans}
-  - {type: held}
   - {type: trans}
+  - {type: held}
   - {type: trans}
   - {type: trans}
   fn:
@@ -276,9 +276,9 @@ layers:
   - {type: trans}
   - {type: trans}
   - '&td_bootloader'
+  - {type: held}
   - {type: trans}
-  - {type: held}
-  - {type: held}
+  - {type: trans}
   - {type: trans}
 combos:
 - p: [7, 8]
