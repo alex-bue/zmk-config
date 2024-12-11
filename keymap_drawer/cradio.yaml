@@ -31,9 +31,9 @@ layers:
   - ','
   - .
   - {t: /, h: RALT}
-  - {t: ENTER, h: symbols}
-  - {t: SPACE, h: navigation}
-  - {t: ENTER, h: LSHFT}
+  - {t: ESC, h: symbols}
+  - {t: ENTER, h: navigation}
+  - SPACE
   - {t: _, h: fn}
   symbols:
   - {type: trans}
@@ -279,7 +279,7 @@ layers:
   - {type: held}
   - {type: trans}
   - {type: trans}
-  - {type: trans}
+  - {type: held}
 combos:
 - p: [7, 8]
   k: BSPC
