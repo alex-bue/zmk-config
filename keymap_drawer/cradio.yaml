@@ -31,8 +31,8 @@ layers:
   - ','
   - .
   - {t: /, h: RALT}
-  - {t: _, h: symbols}
-  - {t: SPACE, h: navigation}
+  - {t: _, h: navigation}
+  - {t: SPACE, h: symbols}
   - SPACE
   - {t: ENTER, h: fn}
   symbols:
@@ -66,8 +66,8 @@ layers:
   - '['
   - ']'
   - '@'
-  - {type: held}
   - {type: trans}
+  - {type: held}
   - {type: trans}
   - {type: trans}
   numbers:
@@ -161,7 +161,7 @@ layers:
   - UP
   - RIGHT
   - BSPC
-  - {type: trans}
+  - '&td_bootloader'
   - Gui+ X
   - Gui+ C
   - Gui+ V
@@ -171,8 +171,8 @@ layers:
   - Gui+ C
   - Gui+ X
   - {type: trans}
-  - {type: trans}
   - {type: held}
+  - {type: trans}
   - {type: trans}
   - {type: trans}
   fn:
@@ -205,7 +205,7 @@ layers:
   - BRI DN
   - BRI UP
   - {type: trans}
-  - {type: trans}
+  - '&td_bootloader'
   - {type: trans}
   - {type: trans}
   - {type: trans}
