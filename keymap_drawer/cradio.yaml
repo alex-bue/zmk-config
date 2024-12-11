@@ -31,10 +31,10 @@ layers:
   - ','
   - .
   - {t: /, h: RALT}
-  - {t: ESC, h: symbols}
-  - {t: ENTER, h: navigation}
+  - {t: _, h: symbols}
+  - {t: SPACE, h: navigation}
   - SPACE
-  - {t: _, h: fn}
+  - {t: ENTER, h: fn}
   symbols:
   - {type: trans}
   - <
