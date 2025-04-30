@@ -7,8 +7,9 @@
   ╰───────────╮ 30  31 │ 32  33 ╭───────────╯ ╰───────────╮ LH1 LH0 │ RH0 RH1 ╭───────────╯
               ╰────────┴────────╯                         ╰─────────┴─────────╯             */
 
-#define COMBO_TERM_FAST 18
-#define COMBO_TERM_SLOW 30
+#define COMBO_TERM_FAST 20
+#define COMBO_TERM_SLOW 50
+#define COMBO_TERM_VERY_SLOW 100
 #define COMBO_PRIOR_IDLE 150
 
 / {
@@ -18,14 +19,14 @@
 
         /* Horizontal combos - right hand */
         combo_bspc {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <RT2 RT3>;
           bindings = <&kp BSPC>;
         };
 
         combo_del {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <RT1 RT2>;
           bindings = <&kp DEL>;
@@ -33,43 +34,43 @@
 
         /* Horizontal combos - left hand */
         combo_esc {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LM3 LM2>;
           bindings = <&kp ESC>;
         };
 
         combo_tab {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LT3 LT2>;
           bindings = <&kp TAB>;
         };
 
-        combo_alfred {
-          timeout-ms = <COMBO_TERM_FAST>;
+        combo_alt {
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <11 12 13>;
-          bindings = <&kp LG(SPACE)>;
+          bindings = <&kp LALT>;
           layers = <0>;
         };
 
         combo_copy {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB3 LB2>;
           bindings = <&kp LC(INS)>;
         };
 
         combo_cut {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB3 LB1>;
           bindings = <&kp LC(X)>;
         };
         
         combo_paste {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB2 LB1>;
           bindings = <&kp LS(INS)>;
@@ -77,7 +78,7 @@
         
         /* both hands */
         combo_caps_word {
-          timeout-ms = <COMBO_TERM_FAST>;
+          timeout-ms = <COMBO_TERM_VERY_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LM1 RM1>;
           bindings = <&caps_word>;
