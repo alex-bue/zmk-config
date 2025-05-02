@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: ferris_rotated}
+layout: {zmk_keyboard: cradio}
 layers:
   default:
   - Q
@@ -141,11 +141,11 @@ layers:
   - '0'
   - {type: trans}
   navigation:
-  - Alt+ 1
-  - Alt+ 2
-  - Alt+ 3
-  - Alt+ 4
-  - Alt+ 5
+  - Alt+1
+  - Alt+2
+  - Alt+3
+  - Alt+4
+  - Alt+5
   - HOME
   - PG DN
   - PG UP
@@ -162,14 +162,14 @@ layers:
   - RIGHT
   - BSPC
   - '&td_bootloader'
-  - Gui+ X
-  - Gui+ C
-  - Gui+ V
+  - Gui+X
+  - Gui+C
+  - Gui+V
   - {type: trans}
   - END
-  - Gui+ V
-  - Gui+ C
-  - Gui+ X
+  - Gui+V
+  - Gui+C
+  - Gui+X
   - {type: trans}
   - {type: held}
   - {type: trans}
@@ -216,34 +216,34 @@ layers:
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Alt+ TAB
+  - Alt+TAB
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Alt+Sft+ =
+  - Alt+Sft+=
   - LCTRL
   - LALT
   - LGUI
   - LSHFT
   - {type: trans}
   - {type: trans}
-  - Alt+ 1
-  - Alt+ 2
-  - Alt+ 3
-  - Alt+Sft+ -
+  - Alt+1
+  - Alt+2
+  - Alt+3
+  - Alt+Sft+-
   - {type: held}
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - {type: trans}
-  - Alt+ 4
-  - Alt+ 5
-  - Alt+ 6
-  - Alt+Sft+ 0
+  - Alt+4
+  - Alt+5
+  - Alt+6
+  - Alt+Sft+0
   - {type: trans}
   - {type: trans}
-  - Sft+Alt+ ;
+  - Sft+Alt+;
   - {type: trans}
   sys:
   - {type: trans}
@@ -290,13 +290,13 @@ combos:
 - p: [1, 2]
   k: TAB
 - p: [11, 12, 13]
-  k: Gui+ SPACE
+  k: LALT
   l: [default]
 - p: [21, 22]
-  k: Ctl+ INS
+  k: Ctl+INS
 - p: [21, 23]
-  k: Ctl+ X
+  k: Ctl+X
 - p: [22, 23]
-  k: Sft+ INS
+  k: Sft+INS
 - p: [13, 16]
   k: '&caps_word'
