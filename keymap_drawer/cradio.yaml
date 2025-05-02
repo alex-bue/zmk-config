@@ -24,7 +24,7 @@ layers:
   - {t: Z, h: wm}
   - X
   - C
-  - {t: V, h: numpad}
+  - {t: V, h: num}
   - B
   - N
   - M
@@ -70,42 +70,7 @@ layers:
   - {type: held}
   - {type: trans}
   - {type: trans}
-  numbers:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
-  - LCTRL
-  - LALT
-  - LGUI
-  - LSHFT
-  - {type: trans}
-  - {type: trans}
-  - LSHFT
-  - LGUI
-  - LALT
-  - LCTRL
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  - {type: trans}
-  numpad:
+  num:
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -127,15 +92,15 @@ layers:
   - '6'
   - '-'
   - {type: trans}
-  - {type: trans}
-  - {type: trans}
+  - ','
+  - .
   - {type: held}
   - {type: trans}
-  - ','
+  - .
   - '1'
   - '2'
   - '3'
-  - .
+  - ','
   - {type: trans}
   - {type: trans}
   - '0'
@@ -269,17 +234,17 @@ layers:
   - '&td_bootloader'
   - {type: trans}
   - {type: trans}
-  - {type: trans}
+  - {type: held}
   - {type: trans}
   - OUT TOG
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - '&td_bootloader'
+  - {type: trans}
   - {type: held}
   - {type: trans}
   - {type: trans}
-  - {type: held}
 combos:
 - p: [7, 8]
   k: BSPC
