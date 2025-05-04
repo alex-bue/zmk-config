@@ -12,7 +12,6 @@
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
 // Personal includes
-#include "includes/conditional_layers.dtsi"
 #include "includes/behaviors_homerow_mods.dtsi"
 #include "includes/behaviors_other.dtsi"
 #include "includes/combos.dtsi"
@@ -28,6 +27,16 @@
 #define FN 5
 #define WM 6
 #define SYS 7
+
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV FN>;
+            then-layer = <SYS>;
+        };
+    };
+};
 
 / { 
 
