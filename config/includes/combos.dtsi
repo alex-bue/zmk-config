@@ -57,7 +57,7 @@
         combo_alt {
           timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-          key-positions = <11 12 13>;
+          key-positions = <LM3 LM2 LM1>;
           bindings = <&kp LALT>;
           layers = <0>;
         };
@@ -81,6 +81,13 @@
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB2 LB1>;
           bindings = <&kp LS(INS)>;
+        };
+
+        combo_select_all {
+          timeout-ms = <COMBO_TERM_SLOW>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <LH0 LM2 LM1>;
+          bindings = <&select_line>;
         };
         
         /* both hands */
