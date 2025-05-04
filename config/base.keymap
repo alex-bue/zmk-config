@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Urob zmk helper includes
+#include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
 // Personal includes
