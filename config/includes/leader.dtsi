@@ -1,0 +1,13 @@
+/ {
+    behaviors {
+        leader: leader {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            ignore-keys = <LSHFT RSHFT>;
+            de_ae { sequence = <A>; bindings = <&de_ae>; };
+            de_oe { sequence = <O>; bindings = <&de_oe>; };
+            de_ue { sequence = <U>; bindings = <&de_ue>; };
+            de_eszett { sequence = <S>; bindings = <&de_eszett>; };
+        };
+    };
+};

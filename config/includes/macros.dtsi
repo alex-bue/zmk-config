@@ -1,0 +1,13 @@
+/ {
+    macros {
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = 
+                <&macro_tap &kp HOME>,
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp END>,
+                <&macro_release &kp LSHFT>;
+        };
+    };
+};
