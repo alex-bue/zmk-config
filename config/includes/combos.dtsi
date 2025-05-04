@@ -59,7 +59,7 @@
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LM3 LM2 LM1>;
           bindings = <&kp LALT>;
-          layers = <0>;
+          layers = <BASE_WIN>;
         };
 
         combo_copy {
@@ -74,6 +74,31 @@
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LB3 LB1>;
           bindings = <&kp LC(X)>;
+        };
+
+        combo_cut_mac{
+          timeout-ms = <COMBO_TERM_SLOW>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <LB3 LB1>;
+          layers = <BASE_MAC>;
+          bindings = <&kp LG(X)>;
+        };
+
+
+        combo_copy_mac{
+          timeout-ms = <COMBO_TERM_SLOW>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <LB3 LB2>;
+          layers = <BASE_MAC>;
+          bindings = <&kp LG(C)>;
+        };
+
+        combo_paste_mac{
+          timeout-ms = <COMBO_TERM_SLOW>;
+          require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
+          key-positions = <LB2 LB1>;
+          layers = <BASE_MAC>;
+          bindings = <&kp LG(V)>;
         };
         
         combo_paste {
