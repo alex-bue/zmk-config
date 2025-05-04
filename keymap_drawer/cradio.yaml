@@ -250,10 +250,12 @@ combos:
   k: BSPC
 - p: [6, 7]
   k: DEL
-- p: [11, 12]
-  k: ESC
 - p: [1, 2]
   k: TAB
+- p: [11, 12]
+  k: ESC
+- p: [12, 13]
+  k: '&leader'
 - p: [11, 12, 13]
   k: LALT
   l: [default]
@@ -263,5 +265,7 @@ combos:
   k: Ctl+X
 - p: [22, 23]
   k: Sft+INS
+- p: [31, 12, 13]
+  k: '&select_line'
 - p: [13, 16]
   k: '&caps_word'
