@@ -40,14 +40,14 @@
 
 / {
     behaviors {
-        magic_shift_tap {
+          magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             bindings = <&kp LSHFT>, <&caps_word>;
         };
 
-        magic_shift {
+        magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "balanced";
