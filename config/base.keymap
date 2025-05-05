@@ -11,22 +11,32 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
+// Layer definitions
+#define BASE_WIN 0
+#define BASE_MAC 1
+#define SYM 2
+#define NUM 3
+#define NAV 4
+#define FN 5
+#define WM 6
+#define SYS 7
+
 // Personal includes
-#include "includes/conditional_layers.dtsi"
 #include "includes/behaviors_homerow_mods.dtsi"
 #include "includes/behaviors_other.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/macros.dtsi"
 #include "includes/leader.dtsi"
 
-// Layer definitions
-#define BASE 0
-#define SYM 1
-#define NUM 2
-#define NAV 3
-#define FN 4
-#define WM 5
-#define SYS 6
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <NAV FN>;
+            then-layer = <SYS>;
+        };
+    };
+};
 
 / { 
 
@@ -34,10 +44,19 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
+            &kp Q           &kp W         &kp E         &kp R                &kp T          &kp Y           &kp U                &kp I         &kp O         &kp P
+            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G          &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
+            &lt WM Z      &kp X           &kp C         &lt NUM V            &kp B          &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+                                                        &lt NAV UNDER        &lsk SYM LSHFT &lt SYM SPACE   &lt FN ENTER
+            >;
+        };
+
+        default_layer_mac {
+            bindings = <
             &kp Q           &kp W         &kp E         &kp R               &kp T          &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G          &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
-            &lt WM Z      &kp X           &kp C         &lt NUM V        &kp B          &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
-                                                        &lt NAV UNDER       &lt SYM SPACE  &kp SPACE       &lt FN ENTER
+            &lt WM Z        &kp X         &kp C         &lt NUM V           &kp B          &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+                                                        &lt NAV UNDER       &lsk SYM LSHFT &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
@@ -61,9 +80,9 @@
 
         navigation_layer {
             bindings = <
-            &kp LA(N1)  &kp LA(N2)  &kp LA(N3)    &kp LA(N4)  &kp LA(N5)          &kp HOME   &kp PG_DN    &kp PG_UP     &kp BSPC    &kp DEL
-            &kp LCTRL   &kp LALT    &kp LGUI      &kp LSHFT   &trans              &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT   &kp BSPC
-            &td_bootloader      &kp LG(X)   &kp LG(C)     &kp LG(V)   &trans              &kp END    &kp LG(V)    &kp LG(C)     &kp LG(X)   &trans
+            &kp LA(N1)     &kp LA(N2)  &kp LA(N3) &kp LA(N4)  &kp LA(N5)          &kp HOME   &kp PG_DN &kp PG_UP  &kp BSPC    &kp DEL
+            &kp LCTRL      &kp LALT    &kp LGUI   &kp LSHFT   &trans              &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp BSPC
+            &td_bootloader &trans      &trans     &trans      &trans              &kp END    &trans    &trans     &trans    &trans
                                                   &trans      &trans              &trans     &trans
             >;
         };
@@ -88,7 +107,7 @@
 
         sys_layer {
             bindings = <
-            &trans          &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
+            &tog BASE_MAC    &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
             &trans          &trans  &trans  &trans  &trans    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
             &td_bootloader  &trans  &trans  &trans  &trans    &out OUT_TOG  &trans        &trans        &trans        &td_bootloader
                                             &trans  &trans    &trans        &trans
