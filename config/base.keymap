@@ -28,6 +28,11 @@
 #include "includes/macros.dtsi"
 #include "includes/leader.dtsi"
 
+&sk {
+  release-after-ms = <900>;
+  quick-release;
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -44,16 +49,16 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp LSHFT &caps_word>;
+            bindings = <&sk LSHFT>, <&caps_word>;
         };
 
         magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            bindings = <&magic_shift_tap &kp LSHFT>;
+            bindings = <&kp>, <&magic_shift_tap>;
         };
     };
 };
@@ -64,19 +69,19 @@
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-            &kp Q           &kp W         &kp E         &kp R                &kp T          &kp Y           &kp U                &kp I         &kp O         &kp P
-            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G          &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
-            &lt WM Z      &kp X           &kp C         &lt NUM V            &kp B          &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
-                                                        &lt NAV UNDER        &magic_shift &lt SYM SPACE   &lt FN ENTER
+            &kp Q           &kp W         &kp E         &kp R                &kp T                &kp Y           &kp U                &kp I         &kp O         &kp P
+            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
+            &lt WM Z      &kp X           &kp C         &lt NUM V            &kp B                &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+                                                        &lt NAV UNDER        &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
         default_layer_mac {
             bindings = <
-            &kp Q           &kp W         &kp E         &kp R               &kp T          &kp Y           &kp U                &kp I         &kp O         &kp P
-            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G          &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
-            &lt WM Z        &kp X         &kp C         &lt NUM V           &kp B          &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
-                                                        &lt NAV UNDER       &magic_shift &lt SYM SPACE   &lt FN ENTER
+            &kp Q           &kp W         &kp E         &kp R               &kp T                 &kp Y           &kp U                &kp I         &kp O         &kp P
+            &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G                 &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
+            &lt WM Z        &kp X         &kp C         &lt NUM V           &kp B                 &kp N           &kp M                &kp COMMA     &kp DOT       &ht RALT FSLH
+                                                        &lt NAV UNDER       &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
