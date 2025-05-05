@@ -32,8 +32,43 @@ layers:
   - .
   - {t: /, h: RALT}
   - {t: _, h: navigation}
+  - {t: LSHFT, h: symbols}
   - {t: SPACE, h: symbols}
-  - SPACE
+  - {t: ENTER, h: fn}
+  default_layer_mac:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: LSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: LALT}
+  - {t: '''', h: LCTRL}
+  - {t: Z, h: wm}
+  - X
+  - C
+  - {t: V, h: num}
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: RALT}
+  - {t: _, h: navigation}
+  - {t: LSHFT, h: symbols}
+  - {t: SPACE, h: symbols}
   - {t: ENTER, h: fn}
   symbols:
   - {type: trans}
@@ -127,14 +162,14 @@ layers:
   - RIGHT
   - BSPC
   - '&td_bootloader'
-  - Gui+X
-  - Gui+C
-  - Gui+V
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - {type: trans}
   - END
-  - Gui+V
-  - Gui+C
-  - Gui+X
+  - {type: trans}
+  - {type: trans}
+  - {type: trans}
   - {type: trans}
   - {type: held}
   - {type: trans}
@@ -211,7 +246,7 @@ layers:
   - Sft+Alt+;
   - {type: trans}
   sys:
-  - {type: trans}
+  - {t: default_layer_mac, h: toggle}
   - {type: trans}
   - {type: trans}
   - {type: trans}
@@ -234,17 +269,17 @@ layers:
   - '&td_bootloader'
   - {type: trans}
   - {type: trans}
-  - {type: held}
+  - {type: trans}
   - {type: trans}
   - OUT TOG
   - {type: trans}
   - {type: trans}
   - {type: trans}
   - '&td_bootloader'
-  - {type: trans}
   - {type: held}
   - {type: trans}
   - {type: trans}
+  - {type: held}
 combos:
 - p: [7, 8]
   k: BSPC
@@ -261,10 +296,22 @@ combos:
   l: [default]
 - p: [21, 22]
   k: Ctl+INS
+  l: [default]
 - p: [21, 23]
   k: Ctl+X
+  l: [default]
+- p: [21, 23]
+  k: Gui+X
+  l: [default_layer_mac]
+- p: [21, 22]
+  k: Gui+C
+  l: [default_layer_mac]
+- p: [22, 23]
+  k: Gui+V
+  l: [default_layer_mac]
 - p: [22, 23]
   k: Sft+INS
+  l: [default]
 - p: [31, 12, 13]
   k: '&select_line'
 - p: [13, 16]
