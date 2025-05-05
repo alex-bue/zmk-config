@@ -40,20 +40,20 @@
 
 / {
     behaviors {
-          magic_shift_tap: magic_shift_tap {
+        magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            bindings = <&kp LSHFT>, <&caps_word>;
+            bindings = <&kp LSHFT &caps_word>;
         };
 
         magic_shift: magic_shift {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            bindings = <&magic_shift_tap>, <&kp LSHFT>;
+            bindings = <&magic_shift_tap &kp LSHFT>;
         };
     };
 };
