@@ -1,0 +1,342 @@
+layout: {zmk_keyboard: base}
+layers:
+  default:
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: A, h: Ctrl}
+    - {t: S, h: Alt}
+    - {t: D, h: Gui}
+    - {t: F, h: Shift}
+    - G
+    - H
+    - {t: J, h: Shift}
+    - {t: K, h: Gui}
+    - {t: L, h: Alt}
+    - {t: '''', h: Ctrl}
+    - {t: Z, h: wm}
+    - X
+    - C
+    - {t: V, h: num}
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - {t: /, h: Alt}
+    - {t: _, h: navigation}
+    - {t: Shift, h: symbols}
+    - {t: Spc, h: symbols}
+    - {t: ENTER, h: fn}
+  default_layer_mac:
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: A, h: Ctrl}
+    - {t: S, h: Alt}
+    - {t: D, h: Gui}
+    - {t: F, h: Shift}
+    - G
+    - H
+    - {t: J, h: Shift}
+    - {t: K, h: Gui}
+    - {t: L, h: Alt}
+    - {t: '''', h: Ctrl}
+    - {t: Z, h: wm}
+    - X
+    - C
+    - {t: V, h: num}
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - {t: /, h: Alt}
+    - {t: _, h: navigation}
+    - {t: Shift, h: symbols}
+    - {t: Spc, h: symbols}
+    - {t: ENTER, h: fn}
+  symbols:
+    - {type: trans}
+    - <
+    - '>'
+    - \
+    - '`'
+    - '&'
+    - '`'
+    - (
+    - )
+    - '%'
+    - '!'
+    - '-'
+    - +
+    - '='
+    - '#'
+    - '|'
+    - ':'
+    - '['
+    - ']'
+    - $
+    - {type: trans}
+    - /
+    - '*'
+    - ^
+    - '&'
+    - '~'
+    - ;
+    - '{'
+    - '}'
+    - '@'
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+  num:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - /
+    - '7'
+    - '8'
+    - '9'
+    - +
+    - Ctrl
+    - Alt
+    - Gui
+    - Shift
+    - {type: trans}
+    - '*'
+    - '4'
+    - '5'
+    - '6'
+    - '-'
+    - {type: trans}
+    - ','
+    - .
+    - {type: held}
+    - {type: trans}
+    - .
+    - '1'
+    - '2'
+    - '3'
+    - ','
+    - {type: trans}
+    - {type: trans}
+    - '0'
+    - {type: trans}
+  navigation:
+    - Alt+1
+    - Alt+2
+    - Alt+3
+    - Alt+4
+    - Alt+5
+    - Home
+    - PgDn
+    - PgUp
+    - Bspc
+    - Del
+    - Ctrl
+    - Alt
+    - Gui
+    - Shift
+    - {type: trans}
+    - ←
+    - ↓
+    - ↑
+    - →
+    - Bspc
+    - '&td_bootloader'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - End
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  fn:
+    - F1
+    - F2
+    - F3
+    - F4
+    - F5
+    - {type: trans}
+    - $$mdi:play-pause$$
+    - $$mdi:volume-off$$
+    - {type: trans}
+    - {type: trans}
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - $$mdi:skip-backward$$
+    - $$mdi:volume-medium$$
+    - $$mdi:volume-high$$
+    - $$mdi:skip-forward$$
+    - {type: trans}
+    - F11
+    - F12
+    - F13
+    - F14
+    - F15
+    - {type: trans}
+    - $$mdi:brightness-5$$
+    - $$mdi:brightness-7$$
+    - {type: trans}
+    - '&td_bootloader'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+  wm:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Alt+Tab
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Alt+Sft+=
+    - Ctrl
+    - Alt
+    - Gui
+    - Shift
+    - {type: trans}
+    - {type: trans}
+    - Alt+1
+    - Alt+2
+    - Alt+3
+    - Alt+Sft+-
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Alt+4
+    - Alt+5
+    - Alt+6
+    - Alt+Sft+0
+    - {type: trans}
+    - {type: trans}
+    - Sft+Alt+;
+    - {type: trans}
+  sys:
+    - {t: default_layer_mac, h: toggle}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - BT CLR
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - '&td_bootloader'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - OUT TOG
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '&td_bootloader'
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+combos:
+  - p: [7, 8]
+    k: Bspc
+    l:
+      - Combos
+  - p: [6, 7]
+    k: Del
+    l:
+      - Combos
+  - p: [1, 2]
+    k: Tab
+    l:
+      - Combos
+  - p: [11, 12]
+    k: Esc
+    l:
+      - Combos
+  - p: [12, 13]
+    k: '&leader'
+    l:
+      - Combos
+  - p: [11, 12, 13]
+    k: Alt
+    l: [Combos]
+    draw_separate: true
+  - p: [21, 22]
+    k: Ctl+Ins
+    l: [Combos]
+  - p: [21, 23]
+    k: Ctl+X
+    l: [Combos]
+    a: bottom
+    o: 0.15
+  - p: [21, 23]
+    k: Gui+X
+    l: [Combos]
+    hidden: true
+  - p: [21, 22]
+    k: Gui+C
+    l: [Combos]
+    hidden: true
+  - p: [22, 23]
+    k: Gui+V
+    l: [Combos]
+    hidden: true
+  - p: [22, 23]
+    k: Sft+Ins
+    l: [Combos]
+  - p: [31, 12, 13]
+    k: '&select_line'
+    draw_separate: true
+    l:
+      - Combos
+  - p: [13, 16]
+    k: '&caps_word'
+    a: top
+    o: 1.15
+    l:
+      - Combos
