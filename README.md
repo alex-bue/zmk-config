@@ -2,5 +2,4 @@
 
 ## Keymap
 
-![Keymap](keymap_drawer/cradio.svg) 
-
+![Keymap](keymap_drawer/base.svg) 

@@ -110,7 +110,7 @@
           layers = <BASE_WIN>;
         };
 
-        combo_select_all {
+        combo_select_line {
           timeout-ms = <COMBO_TERM_SLOW>;
           require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
           key-positions = <LH0 LM2 LM1>;
