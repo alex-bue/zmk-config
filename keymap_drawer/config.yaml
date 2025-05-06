@@ -18,6 +18,17 @@ parse_config:
 
   raw_binding_map:
     "&td_reset": { t: "td_reset" }
+    "&bootloader": Boot
+    "&td_bootloader": Tap Dance Boot
+    "&caps_word": Caps Word
+    "&leader": Leader
+    "&magic_shift": { "t": Magic, "h": "Shift" }
+    "&kp LC(INS)": Copy
+    "&kp LC(X)": Cut
+    "&kp LS(INS)": Paste
+
+    "&lpar_lt": { "t": "(", "right": "<" }
+    "&rpar_gt": { "t": ")", "right": ">" }
 
   zmk_remove_keycode_prefix: ["AG"]
 
@@ -46,6 +57,7 @@ parse_config:
     BSPC: Bspc
     DEL: Del
     ESC: Esc
+    ENTER: Enter
     RET: Enter
     SPACE: Spc
     TAB: Tab
@@ -167,5 +179,5 @@ draw_config:
     text {
         text-anchor: middle;
         dominant-baseline: middle;
-        text-transform: lowercase;
+        // text-transform: lowercase;
     }

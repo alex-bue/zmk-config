@@ -28,13 +28,13 @@ layers:
     - B
     - N
     - M
-    - ','
-    - .
-    - {t: /, h: Alt}
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
+    - /
     - {t: _, h: navigation}
-    - {t: Shift, h: Shift, s: '&caps_word'}
+    - Magic Shift
     - {t: Spc, h: symbols}
-    - {t: ENTER, h: fn}
+    - {t: Enter, h: fn}
   default_layer_mac:
     - Q
     - W
@@ -63,13 +63,13 @@ layers:
     - B
     - N
     - M
-    - ','
-    - .
-    - {t: /, h: Alt}
+    - {t: ',', s: ;}
+    - {t: ., s: ':'}
+    - /
     - {t: _, h: navigation}
-    - {t: Shift, h: Shift, s: '&caps_word'}
+    - Magic Shift
     - {t: Spc, h: symbols}
-    - {t: ENTER, h: fn}
+    - {t: Enter, h: fn}
   symbols:
     - {type: trans}
     - <
@@ -161,7 +161,7 @@ layers:
     - ↑
     - →
     - Bspc
-    - '&td_bootloader'
+    - Tap Dance Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -176,36 +176,36 @@ layers:
     - {type: trans}
     - {type: trans}
   fn:
-    - F1
-    - F2
-    - F3
-    - F4
-    - F5
+    - F12
+    - F7
+    - F8
+    - F9
+    - {type: trans}
     - {type: trans}
     - $$mdi:play-pause$$
     - $$mdi:volume-off$$
     - {type: trans}
     - {type: trans}
+    - F11
+    - F4
+    - F5
     - F6
-    - F7
-    - F8
-    - F9
-    - F10
+    - {type: trans}
     - $$mdi:skip-backward$$
     - $$mdi:volume-medium$$
     - $$mdi:volume-high$$
     - $$mdi:skip-forward$$
     - {type: trans}
-    - F11
-    - F12
-    - F13
-    - F14
-    - F15
+    - F10
+    - F1
+    - F2
+    - F3
+    - {type: trans}
     - {type: trans}
     - $$mdi:brightness-5$$
     - $$mdi:brightness-7$$
     - {type: trans}
-    - '&td_bootloader'
+    - Tap Dance Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -266,7 +266,7 @@ layers:
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
-    - '&td_bootloader'
+    - Tap Dance Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -275,19 +275,13 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - '&td_bootloader'
+    - Tap Dance Boot
     - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: held}
   Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 combos:
-  - p: [13, 16]
-    k: '&caps_word'
-    a: top
-    o: 1.15
-    l:
-      - Combos
   - p: [7, 8]
     k: Bspc
     l:
@@ -297,11 +291,11 @@ combos:
     l:
       - Combos
   - p: [16, 17]
-    k: (
+    k: {t: (, right: <}
     l:
       - Combos
   - p: [17, 18]
-    k: )
+    k: {t: ), right: '>'}
     l:
       - Combos
   - p: [26, 27]
@@ -353,7 +347,7 @@ combos:
     l:
       - Combos
   - p: [12, 13]
-    k: '&leader'
+    k: Leader
     l:
       - Combos
   - p: [31, 12, 13]
@@ -366,19 +360,10 @@ combos:
     l: [Combos]
     draw_separate: true
   - p: [21, 22]
-    k: Ctl+Ins
+    k: '&copy_cut'
     l: [Combos]
-  - p: [21, 23]
-    k: Ctl+X
-    l: [Combos]
-    a: bottom
-    o: 0.15
-  - p: [21, 23]
-    k: Gui+X
-    l: [Combos]
-    hidden: true
   - p: [21, 22]
-    k: Gui+C
+    k: '&copy_cut_mac'
     l: [Combos]
     hidden: true
   - p: [22, 23]
@@ -386,8 +371,17 @@ combos:
     l: [Combos]
     hidden: true
   - p: [22, 23]
-    k: Sft+Ins
+    k: Paste
     l: [Combos]
+  - p: [21, 23]
+    k: Cut
+    l: [Combos]
+    a: bottom
+    o: 0.15
+  - p: [21, 23]
+    k: Gui+X
+    l: [Combos]
+    hidden: true
   - p: [0, 10]
     k: '!'
     l:
