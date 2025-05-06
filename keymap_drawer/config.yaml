@@ -1,55 +1,152 @@
+parse_config:
+  zmk_additional_includes:
+    - "/zmk-helpers/include"
+
+  zmk_preamble: |
+    #include <zmk-helpers/key-labels/34.h>
+
+  preprocess: true
+
+  skip_binding_parsing: false
+  sticky_label: sticky
+  toggle_label: toggle
+  tap_toggle_label: tap-toggle
+  mark_alternate_layer_activators: false
+  trans_legend:
+    tap: ""
+    type: trans
+
+  raw_binding_map:
+    "&td_reset": { t: "td_reset" }
+
+  zmk_remove_keycode_prefix: ["AG"]
+
+  zmk_combos:
+    combo_cut: { align: bottom, o: 0.15 }
+
+    combo_copy_mac: { hidden: true }
+    combo_paste_mac: { hidden: true }
+    combo_cut_mac: { hidden: true }
+
+    combo_caps_word: { align: top, o: 1.15 }
+    combo_alt: { draw_separate: true }
+    combo_select_line: { draw_separate: true }
+
+  zmk_keycode_map:
+    # custom mappings
+    LALT: Alt
+    RALT: Alt
+    LCTRL: Ctrl
+    RCTRL: Ctrl
+    LGUI: Gui
+    RGUI: Gui
+    LSHFT: Shift
+    RSHFT: Shift
+
+    BSPC: Bspc
+    DEL: Del
+    ESC: Esc
+    RET: Enter
+    SPACE: Spc
+    TAB: Tab
+
+    PG_UP: PgUp
+    PG_DN: PgDn
+    INS: Ins
+    HOME: Home
+    END: End
+
+    UP: ↑
+    DOWN: ↓
+    LEFT: ←
+    RIGHT: →
+
+    C_MUTE: $$mdi:volume-off$$
+    C_PP: $$mdi:play-pause$$
+    C_PLAY_PAUSE: $$mdi:play-pause$$
+    C_VOL_UP: $$mdi:volume-high$$
+    C_VOL_DN: $$mdi:volume-medium$$
+    C_NEXT: $$mdi:skip-forward$$
+    C_PREV: $$mdi:skip-backward$$
+    C_BRI_DN: $$mdi:brightness-5$$
+    C_BRI_UP: $$mdi:brightness-7$$
+
+    # defaults
+    AMPERSAND: "&"
+    AMPS: "&"
+    APOS: "'"
+    APOSTROPHE: "'"
+    ASTERISK: "*"
+    ASTRK: "*"
+    AT: "@"
+    AT_SIGN: "@"
+    BACKSLASH: \
+    BSLH: \
+    CARET: ^
+    COLON: ":"
+    COMMA: ","
+    DLLR: $
+    DOLLAR: $
+    DOT: .
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    EQUAL: "="
+    EXCL: "!"
+    EXCLAMATION: "!"
+    FSLH: /
+    GRAVE: "`"
+    GREATER_THAN: ">"
+    GT: ">"
+    HASH: "#"
+    LBKT: "["
+    LBRC: "{"
+    LEFT_BRACE: "{"
+    LEFT_BRACKET: "["
+    LEFT_PARENTHESIS: (
+    LESS_THAN: <
+    LPAR: (
+    LT: <
+    MINUS: "-"
+    NON_US_BACKSLASH: \
+    NON_US_BSLH: "|"
+    NON_US_HASH: "#"
+    NUHS: "#"
+    PERCENT: "%"
+    PERIOD: .
+    PIPE: "|"
+    PIPE2: "|"
+    PLUS: +
+    POUND: "#"
+    PRCNT: "%"
+    QMARK: "?"
+    QUESTION: "?"
+    RBKT: "]"
+    RBRC: "}"
+    RIGHT_BRACE: "}"
+    RIGHT_BRACKET: "]"
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    SEMI: ;
+    SEMICOLON: ;
+    SINGLE_QUOTE: "'"
+    SLASH: /
+    SQT: "'"
+    STAR: "*"
+    TILDE: "~"
+    TILDE2: "~"
+    UNDER: _
+    UNDERSCORE: _
+
 draw_config:
   key_w: 65
   key_h: 55
-
-  # split_gap: 30.0
-
-  # combo box dimensions
-  combo_w: 28.0
-  combo_h: 26.0
-
-  # key border radius
-  key_rx: 6
-  key_ry: 6
-
-  dark_mode: false
-  n_columns: 1
-  separate_combo_diagrams: true
-  combo_diagrams_scale: 2
-
-  # padding from the edge of cap to top and bottom legends
-  small_pad: 4
 
   # padding between keys
   inner_pad_w: 3
   inner_pad_h: 3
 
-  # padding between layers
-  outer_pad_w: 30.0
-  outer_pad_h: 56.00
-
-  line_spacing: 1.2
-  # arc_radius: 6.0
-  # append_colon_to_layer_header: true
-
-  legend_rel_x: 0.0
-  legend_rel_y: 0.0
-
-  draw_key_sides: false
-  key_side_pars:
-    rel_x: 0
-    rel_y: 4
-    rel_w: 12
-    rel_h: 12
-    rx: 4
-    ry: 4
-
-  # footer_text: ''
-  shrink_wide_legends: 5
-  glyph_tap_size: 14
-  glyph_hold_size: 12
-  glyph_shifted_size: 10
-  glyphs: {}
+  dark_mode: false
+  append_colon_to_layer_header: false
 
   svg_extra_style: |
     rect.key {
@@ -72,100 +169,3 @@ draw_config:
         dominant-baseline: middle;
         text-transform: lowercase;
     }
-
-parse_config:
-  preprocess: true
-  skip_binding_parsing: false
-  sticky_label: sticky
-  toggle_label: toggle
-  tap_toggle_label: tap-toggle
-  mark_alternate_layer_activators: false
-  trans_legend:
-    tap: ''
-    type: trans
-  zmk_additional_includes: ["zmk-helpers/include"]
-
-  raw_binding_map:
-    '&td_reset': {t: 'td_reset'}
-
-  zmk_remove_keycode_prefix: ['AG']
-
-  zmk_keycode_map:
-    EXCLAMATION: '!'
-    EXCL: '!'
-    AT_SIGN: '@'
-    AT: '@'
-    HASH: '#'
-    POUND: '#'
-    DOLLAR: $
-    DLLR: $
-    PERCENT: '%'
-    PRCNT: '%'
-    CARET: ^
-    AMPERSAND: '&'
-    AMPS: '&'
-    ASTERISK: '*'
-    ASTRK: '*'
-    STAR: '*'
-    LEFT_PARENTHESIS: (
-    LPAR: (
-    RIGHT_PARENTHESIS: )
-    RPAR: )
-    EQUAL: '='
-    PLUS: +
-    MINUS: '-'
-    UNDERSCORE: _
-    UNDER: _
-    SLASH: /
-    FSLH: /
-    QUESTION: '?'
-    QMARK: '?'
-    BACKSLASH:
-      tap: '\'
-    BLSH:
-      tap: '\'
-    PIPE: '|'
-    NON_US_BACKSLASH: \
-    PIPE2: '|'
-    NON_US_BSLH: '|'
-    SEMICOLON:
-      tap: ";"
-    SCLN:
-      tap: ";"
-    SEMI:
-      tap: ";"
-    COLON: ':'
-    QUOT:
-      tap: "'"
-    SINGLE_QUOTE:
-      tap: "'"
-    SQT: ''''
-    APOSTROPHE: ''''
-    APOS: ''''
-    DOUBLE_QUOTES: '"'
-    DQT: '"'
-    COMMA:
-      tap: ","
-    LESS_THAN: <
-    LT: <
-    PERIOD: .
-    DOT:
-      tap: "."
-    GREATER_THAN: '>'
-    GT: '>'
-    LEFT_BRACKET: '['
-    LBKT: '['
-    LEFT_BRACE: '{'
-    LBRC:
-      tap: "["
-    RIGHT_BRACKET: ']'
-    RBKT: ']'
-    RIGHT_BRACE: '}'
-    RBRC:
-      tap: "]"
-    GRAVE: '`'
-    TILDE: '~'
-    NON_US_HASH: '#'
-    NUHS: '#'
-    TILDE2: '~'
-  # zmk_combos: {}
