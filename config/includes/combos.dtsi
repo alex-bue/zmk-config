@@ -274,13 +274,5 @@
 			key-positions = <LM0 LB0>;
 			bindings = <&kp TILDE>;
 		};
-
-		/* both hands */
-		combo_caps_word {
-			timeout-ms = <COMBO_TERM_VERY_SLOW>;
-			require-prior-idle-ms = <COMBO_IDLE_FAST>;
-			key-positions = <LM1 RM1>;
-			bindings = <&caps_word>;
-		};
 	};
 };
