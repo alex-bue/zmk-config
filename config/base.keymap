@@ -64,12 +64,14 @@
         // Tap: comma | Shift: semicolon | Ctrl+Shift: <
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp COMMA>, <&comma_inner_morph>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
         comma_inner_morph: comma_inner_morph {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp LT>;
             mods = <(MOD_LCTL | MOD_RCTL)>;
         };
@@ -77,12 +79,14 @@
         // Tap: dot | Shift: colon | Ctrl+Shift: >
         dot_morph: dot_morph {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp DOT>, <&dot_inner_morph>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
         dot_inner_morph: dot_inner_morph {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp COLON>, <&kp GREATER_THAN>;
             mods = <(MOD_LCTL | MOD_RCTL)>;
         };
@@ -90,6 +94,7 @@
         // Tap: ( | Shift: <
         lpar_lt: lpar_lt {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
@@ -97,6 +102,7 @@
         // Tap: ) | Shift: >
         rpar_gt: rpar_gt {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp GT>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
@@ -104,6 +110,7 @@
         // Tap: backspace | LShift: delete
         bs_del: bs_del {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
@@ -121,6 +128,13 @@
         #binding-cells = <0>;
         bindings = <&kp LG(C)>, <&kp LG(X)>;
         tapping-term-ms = <200>;
+        };
+
+        td_bootloader: td_bootloader {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&bootloader>;
         };
     };
 };
