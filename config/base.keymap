@@ -23,7 +23,6 @@
 
 // Personal includes
 #include "includes/behaviors_homerow_mods.dtsi"
-#include "includes/behaviors_other.dtsi"
 #include "includes/combos.dtsi"
 #include "includes/macros.dtsi"
 #include "includes/leader.dtsi"
