@@ -32,7 +32,7 @@ layers:
     - {t: ., s: ':'}
     - /
     - {t: _, h: navigation}
-    - Magic Shift
+    - {t: Magic, h: Shift}
     - {t: Spc, h: symbols}
     - {t: Enter, h: fn}
   default_layer_mac:
@@ -67,7 +67,7 @@ layers:
     - {t: ., s: ':'}
     - /
     - {t: _, h: navigation}
-    - Magic Shift
+    - {t: Magic, h: Shift}
     - {t: Spc, h: symbols}
     - {t: Enter, h: fn}
   symbols:

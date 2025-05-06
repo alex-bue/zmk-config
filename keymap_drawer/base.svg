@@ -316,9 +316,8 @@ text {
 </a></g>
 <g transform="translate(274, 240) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Magic</tspan><tspan x="0" dy="1.2em">Shift</tspan>
-</text>
+<text x="0" y="0" class="key tap">Magic</text>
+<text x="0" y="22" class="key hold">Shift</text>
 </g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
@@ -479,9 +478,8 @@ text {
 </a></g>
 <g transform="translate(274, 240) rotate(30.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.6em">Magic</tspan><tspan x="0" dy="1.2em">Shift</tspan>
-</text>
+<text x="0" y="0" class="key tap">Magic</text>
+<text x="0" y="22" class="key hold">Shift</text>
 </g>
 <g transform="translate(386, 240) rotate(-30.0)" class="key keypos-32">
 <rect rx="6" ry="6" x="-24" y="-24" width="49" height="49" class="key"/>
