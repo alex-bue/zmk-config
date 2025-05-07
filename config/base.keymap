@@ -168,7 +168,7 @@
             &kp Q           &kp W         &kp E         &kp R                &kp T                &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
             &lt WM Z        &kp X         &kp C         &lt NUM V            &kp B                &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &smart_num NAV 0     &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
+                                                        &smart_num           &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
@@ -177,7 +177,7 @@
             &kp Q           &kp W         &kp E         &kp R               &kp T                 &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G                 &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
             &lt WM Z        &kp X         &kp C         &lt NUM V           &kp B                 &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &smart_num NAV 0    &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
+                                                        &smart_num          &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
