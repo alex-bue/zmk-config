@@ -3,6 +3,7 @@
 
 // ZMK includes
 #include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires auto-layer module (urob).
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -44,6 +45,7 @@
 
 / {
     behaviors {
+        // Magic Shift - Tap: Sticky shift | Double-tap: Caps word | Hold: Shift
         magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -58,6 +60,26 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&magic_shift_tap>;
+        };
+
+        // Smart Num - Tap: Smart num layer | Tap Tap (hold): mo num layer | Hold: Nav layer
+        num_dance: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <
+                &num_word NUM   // Single tap: NUMWORD (sticky)
+                &mo NUM         // Double tap: MO(NUM) (momentary)
+            >;
+        };
+
+        smart_num: smart_num {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&num_dance>; 
         };
 
         // Tap: comma | Shift: semicolon | Ctrl+Shift: <
@@ -147,7 +169,7 @@
             &kp Q           &kp W         &kp E         &kp R                &kp T                &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
             &lt WM Z        &kp X         &kp C         &lt NUM V            &kp B                &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &lt NAV UNDER        &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
+                                                        &smart_num NAV 0     &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
