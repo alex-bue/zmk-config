@@ -31,7 +31,7 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-    - {t: _, h: navigation}
+    - {t: Smart-Num, h: navigation}
     - {t: Magic, h: Shift}
     - {t: Spc, h: symbols}
     - {t: Enter, h: fn}
@@ -66,7 +66,7 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-    - {t: _, h: navigation}
+    - {t: Smart-Num, h: navigation}
     - {t: Magic, h: Shift}
     - {t: Spc, h: symbols}
     - {t: Enter, h: fn}
@@ -95,7 +95,7 @@ layers:
     - /
     - '*'
     - ^
-    - '&'
+    - _
     - '~'
     - ;
     - '{'
@@ -138,8 +138,8 @@ layers:
     - ','
     - {type: trans}
     - {type: trans}
-    - '0'
     - {type: trans}
+    - '0'
   navigation:
     - Alt+1
     - Alt+2
@@ -171,7 +171,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: held}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -276,7 +276,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - Tap Dance Boot
-    - {type: held}
+    - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
