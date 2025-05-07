@@ -63,22 +63,22 @@
         };
 
         // Smart Num - Tap: Smart num layer | Tap Tap (hold): mo num layer | Hold: Nav layer
-        num_dance: num_dance {
+        smart_num: smart_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <
-                &num_word NUM   // Single tap: NUMWORD (sticky)
-                &mo NUM         // Double tap: MO(NUM) (momentary)
+                &ht_mo_numword NAV 0  // Hold: nav-layer, Tap: num_word
+                &mo NUM               // Double tap: num-layer
             >;
         };
 
-        smart_num: smart_num {
+        ht_mo_numword: ht_mo_numword {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&num_dance>; 
+            bindings = <&mo>, <&num_word>; 
         };
 
         // Tap: comma | Shift: semicolon | Ctrl+Shift: <
