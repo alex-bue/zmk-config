@@ -68,7 +68,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <
-                &ht_mo_numword NAV 0  // Hold: nav-layer, Tap: num_word
+                &ht_mo_numword NAV NUM  // Hold: nav-layer, Tap: num_word
                 &mo NUM               // Double tap: num-layer
             >;
         };
