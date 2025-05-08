@@ -186,7 +186,7 @@
 			layers = <BASE_WIN>;
 		};
 
-    combo_cut {
+		combo_cut {
 			timeout-ms = <COMBO_TERM_SLOW>;
 			require-prior-idle-ms = <COMBO_IDLE_FAST>;
 			key-positions = <LB3 LB1>;
