@@ -137,17 +137,17 @@
 
         // Tap dance: single tap = copy | double tap = cut
         copy_cut: copy_cut {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&kp LC(INS)>, <&kp LC(X)>;
-        tapping-term-ms = <200>;
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LC(INS)>, <&kp LC(X)>;
+            tapping-term-ms = <200>;
         };
 
         copy_cut_mac: copy_cut_mac {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&kp LG(C)>, <&kp LG(X)>;
-        tapping-term-ms = <200>;
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>, <&kp LG(X)>;
+            tapping-term-ms = <200>;
         };
 
         td_bootloader: td_bootloader {
