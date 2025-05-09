@@ -22,6 +22,7 @@ parse_config:
     "&td_bootloader": Tap Dance Boot
     "&caps_word": Caps Word
     "&leader": Leader
+    "&smart_num": { "t": Smart-Num, "h": "navigation" }
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&kp LC(INS)": Copy
     "&kp LC(X)": Cut
