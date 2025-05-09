@@ -24,7 +24,7 @@ layers:
     - {t: Z, h: wm}
     - X
     - C
-    - {t: V, h: num}
+    - V
     - B
     - N
     - M
@@ -59,7 +59,7 @@ layers:
     - {t: Z, h: wm}
     - X
     - C
-    - {t: V, h: num}
+    - V
     - B
     - N
     - M
@@ -111,35 +111,35 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - /
+    - {type: trans}
     - '7'
     - '8'
     - '9'
-    - +
-    - Ctrl
-    - Alt
-    - Gui
-    - Shift
+    - ','
     - {type: trans}
-    - '*'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - '4'
     - '5'
     - '6'
-    - '-'
+    - '0'
     - {type: trans}
-    - ','
-    - .
-    - {type: held}
     - {type: trans}
-    - .
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
     - '1'
     - '2'
     - '3'
-    - ','
+    - .
+    - {type: trans}
+    - CANCEL
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - '0'
   navigation:
     - Alt+1
     - Alt+2
@@ -390,6 +390,10 @@ combos:
     k: '@'
     l:
       - Combos
+  - p: [12, 22]
+    k: \
+    l:
+      - Combos
   - p: [2, 12]
     k: '#'
     l:
@@ -404,10 +408,6 @@ combos:
       - Combos
   - p: [11, 21]
     k: '`'
-    l:
-      - Combos
-  - p: [12, 22]
-    k: \
     l:
       - Combos
   - p: [13, 23]
