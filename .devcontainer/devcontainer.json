@@ -2,12 +2,5 @@
   "name": "ZMK Config Dev (Dockerfile)",
   "build": {
     "dockerfile": "../Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-vscode.makefile-tools"
-      ]
-    }
   }
 }

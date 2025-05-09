@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM mcr.microsoft.com/devcontainers/python:3.12
 
 RUN apt-get update && \
     apt-get install -y curl git make && \
@@ -7,6 +7,4 @@ RUN apt-get update && \
     chmod +x /usr/local/bin/yq && \
     git clone --depth 1 https://github.com/urob/zmk-helpers.git /zmk-helpers && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
-
-
 
