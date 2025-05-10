@@ -186,7 +186,7 @@
 			layers = <BASE_WIN>;
 		};
 
-    combo_cut {
+		combo_cut {
 			timeout-ms = <COMBO_TERM_SLOW>;
 			require-prior-idle-ms = <COMBO_IDLE_FAST>;
 			key-positions = <LB3 LB1>;
@@ -217,6 +217,13 @@
 			bindings = <&kp AT>;
 		};
 		
+		combo_bslh {
+			timeout-ms = <COMBO_TERM_SLOW>;
+			require-prior-idle-ms = <COMBO_IDLE_SLOW>;
+			key-positions = <LM2 LB2>;
+			bindings = <&kp BSLH>;
+		};
+		
 		combo_hash {
 			timeout-ms = <COMBO_TERM_SLOW>;
 			require-prior-idle-ms = <COMBO_IDLE_SLOW>;
@@ -243,13 +250,6 @@
 			require-prior-idle-ms = <COMBO_IDLE_SLOW>;
 			key-positions = <LM3 LB3>;
 			bindings = <&kp GRAVE>;
-		};
-		
-		combo_bslh {
-			timeout-ms = <COMBO_TERM_SLOW>;
-			require-prior-idle-ms = <COMBO_IDLE_SLOW>;
-			key-positions = <LM2 LB2>;
-			bindings = <&kp BSLH>;
 		};
 		
 		combo_equal {

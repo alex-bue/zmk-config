@@ -3,6 +3,7 @@
 
 // ZMK includes
 #include <behaviors.dtsi>
+#include <behaviors/num_word.dtsi> // Requires auto-layer module (urob).
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -44,6 +45,7 @@
 
 / {
     behaviors {
+        // Magic Shift - Tap: Sticky shift | Double-tap: Caps word | Hold: Shift
         magic_shift_tap: magic_shift_tap {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -58,6 +60,25 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&magic_shift_tap>;
+        };
+
+        // Smart Num - Tap: Smart num layer | Tap Tap (hold): mo num layer | Hold: Nav layer
+        smart_num: smart_num {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <
+                &ht_mo_numword NAV NUM  // Hold: nav-layer, Tap: num_word
+                &mo NUM               // Double tap: num-layer
+            >;
+        };
+
+        ht_mo_numword: ht_mo_numword {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&num_word>; 
         };
 
         // Tap: comma | Shift: semicolon | Ctrl+Shift: <
@@ -116,17 +137,17 @@
 
         // Tap dance: single tap = copy | double tap = cut
         copy_cut: copy_cut {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&kp LC(INS)>, <&kp LC(X)>;
-        tapping-term-ms = <200>;
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LC(INS)>, <&kp LC(X)>;
+            tapping-term-ms = <200>;
         };
 
         copy_cut_mac: copy_cut_mac {
-        compatible = "zmk,behavior-tap-dance";
-        #binding-cells = <0>;
-        bindings = <&kp LG(C)>, <&kp LG(X)>;
-        tapping-term-ms = <200>;
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp LG(C)>, <&kp LG(X)>;
+            tapping-term-ms = <200>;
         };
 
         td_bootloader: td_bootloader {
@@ -146,8 +167,8 @@
             bindings = <
             &kp Q           &kp W         &kp E         &kp R                &kp T                &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
-            &lt WM Z        &kp X         &kp C         &lt NUM V            &kp B                &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &lt NAV UNDER        &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
+            &lt WM Z        &kp X         &kp C         &kp V                &kp B                &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
+                                                        &smart_num           &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
@@ -155,8 +176,8 @@
             bindings = <
             &kp Q           &kp W         &kp E         &kp R               &kp T                 &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G                 &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
-            &lt WM Z        &kp X         &kp C         &lt NUM V           &kp B                 &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &lt NAV UNDER       &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
+            &lt WM Z        &kp X         &kp C         &kp V               &kp B                 &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
+                                                        &smart_num          &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
             >;
         };
 
@@ -164,17 +185,17 @@
             bindings = <
             &trans     &kp LT     &kp GT     &kp BSLH    &kp GRAVE         &kp AMPS  &kp GRAVE  &kp LPAR  &kp RPAR   &kp PERCENT
             &kp EXCL   &kp MINUS  &kp PLUS   &kp EQUAL   &kp HASH          &kp PIPE  &kp COLON  &kp LBKT  &kp RBKT   &kp DOLLAR
-            &trans     &kp SLASH  &kp ASTRK  &kp CARET   &kp AMPS          &kp TILDE &kp SEMI &kp LBRC  &kp RBRC   &kp AT
+            &trans     &kp SLASH  &kp ASTRK  &kp CARET   &kp UNDER         &kp TILDE &kp SEMI   &kp LBRC  &kp RBRC   &kp AT
                                              &trans      &trans            &trans    &trans
             >;
         };
 
         num_layer {
             bindings = <
-            &trans     &trans    &trans     &trans    &trans    &kp FSLH   &kp N7  &kp N8  &kp N9  &kp PLUS
-            &kp LCTRL  &kp LALT  &kp LGUI   &kp LSHFT &trans    &kp ASTRK  &kp N4  &kp N5  &kp N6  &kp MINUS
-            &trans     &kp COMMA    &kp DOT &trans    &trans    &kp DOT    &kp N1  &kp N2  &kp N3  &kp COMMA
-                                            &trans    &trans    &kp N0     &trans
+            &trans     &trans    &trans     &trans    &trans         &trans   &kp N7  &kp N8  &kp N9  &kp COMMA
+            &trans     &trans    &trans     &trans    &trans         &trans   &kp N4  &kp N5  &kp N6  &kp N0
+            &trans     &trans    &trans     &trans    &trans         &trans   &kp N1  &kp N2  &kp N3  &kp DOT
+                                            &trans    &kp K_CANCEL   &trans   &trans
             >;
         };
 
