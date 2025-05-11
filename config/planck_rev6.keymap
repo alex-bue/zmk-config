@@ -1,0 +1,3 @@
+// Source key-labels mapping and base keymap
+#include "zmk-helpers/key-labels/4x12_wide.h"
+#include "base.keymap"
