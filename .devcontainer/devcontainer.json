@@ -1,0 +1,6 @@
+{
+  "name": "ZMK Config Dev (Dockerfile)",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  }
+}
