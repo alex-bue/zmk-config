@@ -228,10 +228,10 @@
 
         sys_layer {
             bindings = <
-            &tog BASE_MAC   &trans  &trans  &trans  &trans    &trans        &trans        &trans        &trans        &trans
-            &trans          &trans  &trans  &trans  &trans    &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
-            &td_bootloader  &trans  &trans  &trans  &trans    &out OUT_TOG  &trans        &trans        &trans        &td_bootloader
-                                            &trans  &trans    &trans        &trans
+            &tog BASE_MAC   &trans  &trans  &trans  &trans    &bt BT_CLR_ALL &trans        &trans        &trans        &trans
+            &trans          &trans  &trans  &trans  &trans    &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
+            &td_bootloader  &trans  &trans  &trans  &trans    &trans         &out OUT_BLE  &out OUT_USB  &trans        &td_bootloader
+                                            &trans  &trans    &trans         &trans
             >;
         };
     };
