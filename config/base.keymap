@@ -219,10 +219,10 @@
 
         wm_layer {
             bindings = <
-            &trans     &trans    &trans    &trans     &trans    &kp LA(TAB)      &trans      &trans      &trans      &kp LA(LS(EQUAL))
-            &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &trans    &trans           &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(LS(MINUS))
-            &trans     &trans    &trans    &trans     &trans    &trans           &kp LA(N4)  &kp LA(N5)  &kp LA(N6)  &kp LA(LS(N0))
-                                           &trans     &trans    &kp LS(LA(SEMI)) &trans
+            &trans     &trans    &trans     &trans        &kp LA(TAB)      &kp LA(N1)       &kp LA(N2) &kp LA(N3) &kp LA(N4)  &kp LA(N5) 
+            &trans     &trans    &kp LCTRL  &kp LSHFT     &trans           &kp LA(H)        &kp LA(J)  &kp LA(K)  &kp LA(L)   &kp LA(LS(PLUS))
+            &trans     &trans    &kp LA(W)  &kp LA(E)     &kp LA(T)        &kp LS(LA(SEMI)) &trans     &trans     &trans      &kp LA(LS(MINUS))
+                                            &kp LA(LS(C)) &kp LA(F)        &kp LA(LS(0))    &kp LA(LS(C))
             >;
         };
 
