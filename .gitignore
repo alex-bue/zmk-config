@@ -1,2 +1,13 @@
 keymap.yaml
 .DS_STORE
+.build/
+.nix/
+.west/
+bootloader/
+firmware/
+modules/
+tools/
+zephyr/
+zmk/
+zmk-helpers/
+urob/

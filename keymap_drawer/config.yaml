@@ -1,6 +1,8 @@
 parse_config:
   zmk_additional_includes:
-    - "/zmk-helpers/include"
+    - ".nix/zmk-helpers/include"
+    - "modules/zmk/helpers/include"
+    - "zmk-helpers/include"
 
   zmk_preamble: |
     #include <zmk-helpers/key-labels/34.h>

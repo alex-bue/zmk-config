@@ -1,7 +1,19 @@
 on:
-  push:
-  pull_request:
   workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/draw.yml
+      - Justfile
+      - flake.*
+      - config/**
+      - keymap_drawer/**
+  pull_request:
+    paths:
+      - .github/workflows/draw.yml
+      - Justfile
+      - flake.*
+      - config/**
+      - keymap_drawer/**
 
 permissions:
   contents: write
@@ -12,11 +24,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build keymap drawer image
-        run: docker build -t keymap-drawer-env .
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate keymap drawing
-        run: make draw
+        run: nix develop --command just draw
 
       - name: Check generated artifacts on PR
         if: github.event_name == 'pull_request'
