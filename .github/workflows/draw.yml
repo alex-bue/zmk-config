@@ -3,6 +3,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   draw:
     runs-on: ubuntu-latest
@@ -15,5 +18,19 @@ jobs:
       - name: Generate keymap drawing
         run: make draw
 
-      - name: Check generated artifacts
+      - name: Check generated artifacts on PR
+        if: github.event_name == 'pull_request'
         run: git diff --exit-code -- keymap_drawer/base.yaml keymap_drawer/base.svg
+
+      - name: Commit generated artifacts
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- keymap_drawer/base.yaml keymap_drawer/base.svg; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add keymap_drawer/base.yaml keymap_drawer/base.svg
+          git commit -m "chore: update keymap drawing"
+          git push

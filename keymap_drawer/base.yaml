@@ -141,11 +141,11 @@ layers:
     - {type: trans}
     - {type: trans}
   navigation:
-    - Alt+1
-    - Alt+2
-    - Alt+3
-    - Alt+4
-    - Alt+5
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '&swapper'
+    - {type: trans}
     - Home
     - PgDn
     - PgUp
@@ -251,7 +251,7 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
+    - BT CLR ALL
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -271,9 +271,9 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - OUT TOG
     - {type: trans}
-    - {type: trans}
+    - OUT BLE
+    - OUT USB
     - {type: trans}
     - Tap Dance Boot
     - {type: trans}
