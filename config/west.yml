@@ -7,19 +7,23 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: edf5c0814fd3ea202e43aad2d68fd32e882a518c # v0.3
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: v0.3 # set to same as ZMK version above
+      path: modules/zmk/helpers
+      revision: b1548efd28d2cc64b9506654e6883695c258190f # v0.3
     - name: zmk-leader-key
       remote: urob
-      revision: v0.3 # set to same as ZMK version above
+      path: modules/zmk/leader-key
+      revision: 99ba80034b44dcad233b2c4bbe97757d9d26d3fd # v0.3
     - name: zmk-auto-layer
       remote: urob
-      revision: v0.3 # set to same as ZMK version above
+      path: modules/zmk/auto-layer
+      revision: b31aa0a357343535a56d535edd0c2ad64d3d7230 # v0.3
     - name: zmk-tri-state
       remote: urob
-      revision: v0.3 # set to same as ZMK version above
+      path: modules/zmk/tri-state
+      revision: 9b7e1ac25f6dc733f62989fd064c6c5927e5e469 # v0.3
   self:
     path: config
