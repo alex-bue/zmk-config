@@ -1,0 +1,19 @@
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build keymap drawer image
+        run: docker build -t keymap-drawer-env .
+
+      - name: Generate keymap drawing
+        run: make draw
+
+      - name: Check generated artifacts
+        run: git diff --exit-code -- keymap_drawer/base.yaml keymap_drawer/base.svg
