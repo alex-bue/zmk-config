@@ -78,6 +78,7 @@ physical-position model in mind when moving bindings between keys.
 | Generated drawing artifacts | `keymap_drawer/base.yaml`, `keymap_drawer/base.svg` |
 | Draw tooling | `Justfile`, `.github/workflows/draw.yml` |
 | Firmware build workflow | `.github/workflows/build.yml` |
+| Local build environment workflow | `.github/workflows/test-build-env.yml` |
 
 ## Drawing
 

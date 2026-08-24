@@ -1,0 +1,48 @@
+name: Test local build environment
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/test-build-env.yml
+      - Justfile
+      - flake.*
+      - config/west.yml
+      - keymap_drawer/**
+  pull_request:
+    paths:
+      - .github/workflows/test-build-env.yml
+      - Justfile
+      - flake.*
+      - config/west.yml
+      - keymap_drawer/**
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check just targets
+        run: nix develop --command just list
+
+      - name: Check west pins
+        run: nix develop --command just check-west
+
+      - name: Initialize west workspace
+        run: nix develop --command just init
+
+      - name: Build one firmware target
+        run: nix develop --command just build cradio_left
+
+      - name: Generate keymap drawing
+        run: nix develop --command just draw
+
+      - name: Check generated artifacts
+        run: git diff --exit-code -- keymap_drawer/base.yaml keymap_drawer/base.svg
