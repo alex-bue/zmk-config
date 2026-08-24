@@ -6,7 +6,6 @@
 #include <behaviors/num_word.dtsi> // Requires auto-layer module (urob).
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
 
 // Urob zmk helper includes
 #include "zmk-helpers/helper.h"
@@ -15,12 +14,11 @@
 // Layer definitions
 #define BASE_WIN 0
 #define BASE_MAC 1
-#define SYM 2
-#define NUM 3
-#define NAV 4
-#define FN 5
-#define WM 6
-#define SYS 7
+#define NUM 2
+#define NAV 3
+#define FN 4
+#define WM 5
+#define SYS 6
 
 // Personal includes
 #include "includes/behaviors_homerow_mods.dtsi"
@@ -176,7 +174,7 @@
             &kp Q           &kp W         &kp E         &kp R                &kp T                &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F  &kp G                &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
             &lt WM Z        &kp X         &kp C         &kp V                &kp B                &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &smart_num           &magic_shift LSHFT 0 &lt SYM SPACE   &lt FN ENTER
+                                                        &smart_num           &magic_shift LSHFT 0 &kp SPACE      &lt FN ENTER
             >;
         };
 
@@ -185,16 +183,7 @@
             &kp Q           &kp W         &kp E         &kp R               &kp T                 &kp Y           &kp U                &kp I         &kp O         &kp P
             &hm_l LCTRL A   &hm_l LALT S  &hm_l LGUI D  &hm_shift_l LSHFT F &kp G                 &kp H           &hm_shift_r LSHFT J  &hm_r RGUI K  &hm_r LALT L  &hm_r LCTRL SQT
             &lt WM Z        &kp X         &kp C         &kp V               &kp B                 &kp N           &kp M                &comma_morph  &dot_morph    &kp FSLH
-                                                        &smart_num          &magic_shift LSHFT 0  &lt SYM SPACE   &lt FN ENTER
-            >;
-        };
-
-        symbols_layer {
-            bindings = <
-            &trans     &kp LT     &kp GT     &kp BSLH    &kp GRAVE         &kp AMPS  &kp GRAVE  &kp LPAR  &kp RPAR   &kp PERCENT
-            &kp EXCL   &kp MINUS  &kp PLUS   &kp EQUAL   &kp HASH          &kp PIPE  &kp COLON  &kp LBKT  &kp RBKT   &kp DOLLAR
-            &trans     &kp SLASH  &kp ASTRK  &kp CARET   &kp UNDER         &kp TILDE &kp SEMI   &kp LBRC  &kp RBRC   &kp AT
-                                             &trans      &trans            &trans    &trans
+                                                        &smart_num          &magic_shift LSHFT 0  &kp SPACE      &lt FN ENTER
             >;
         };
 
@@ -203,7 +192,7 @@
             &trans     &trans    &trans     &trans    &trans         &trans   &kp N7  &kp N8  &kp N9  &kp COMMA
             &trans     &trans    &trans     &trans    &trans         &trans   &kp N4  &kp N5  &kp N6  &kp N0
             &trans     &trans    &trans     &trans    &trans         &trans   &kp N1  &kp N2  &kp N3  &kp DOT
-                                            &trans    &kp K_CANCEL   &trans   &trans
+                                            &trans    &trans         &trans   &trans
             >;
         };
 
@@ -236,9 +225,9 @@
 
         sys_layer {
             bindings = <
-            &tog BASE_MAC   &trans  &trans  &trans  &trans    &bt BT_CLR_ALL &trans        &trans        &trans        &trans
+            &tog BASE_MAC   &trans  &trans  &trans  &trans    &trans         &trans        &trans        &trans        &trans
             &trans          &trans  &trans  &trans  &trans    &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
-            &td_bootloader  &trans  &trans  &trans  &trans    &trans         &out OUT_BLE  &out OUT_USB  &trans        &td_bootloader
+            &td_bootloader  &trans  &trans  &trans  &trans    &trans         &trans        &trans        &trans        &td_bootloader
                                             &trans  &trans    &trans         &trans
             >;
         };
