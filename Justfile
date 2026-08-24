@@ -103,12 +103,11 @@ draw: _check_yq_version
         .layers = {
             Default: .layers.default,
             Mac: .layers.default_layer_mac,
-            Symbols: .layers.symbols,
-            Num: .layers.num,
             Navigation: .layers.navigation,
             Fn: .layers.fn,
-            WM: .layers.wm,
+            Num: .layers.num,
             Sys: .layers.sys,
+            WM: .layers.wm,
             Combos: .layers.Combos
         }
     '

@@ -33,7 +33,7 @@ layers:
     - /
     - {t: Smart Num, h: Nav}
     - {t: Magic, h: Shift}
-    - {t: Spc, h: Sym}
+    - Spc
     - {t: Enter, h: Fn}
   Mac:
     - Q
@@ -68,78 +68,8 @@ layers:
     - /
     - {t: Smart Num, h: Nav}
     - {t: Magic, h: Shift}
-    - {t: Spc, h: Sym}
+    - Spc
     - {t: Enter, h: Fn}
-  Symbols:
-    - {type: trans}
-    - <
-    - '>'
-    - \
-    - '`'
-    - '&'
-    - '`'
-    - (
-    - )
-    - '%'
-    - '!'
-    - '-'
-    - +
-    - '='
-    - '#'
-    - '|'
-    - ':'
-    - '['
-    - ']'
-    - $
-    - {type: trans}
-    - /
-    - '*'
-    - ^
-    - _
-    - '~'
-    - ;
-    - '{'
-    - '}'
-    - '@'
-    - {type: trans}
-    - {type: trans}
-    - {type: held}
-    - {type: trans}
-  Num:
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - '7'
-    - '8'
-    - '9'
-    - ','
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - '4'
-    - '5'
-    - '6'
-    - '0'
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - '1'
-    - '2'
-    - '3'
-    - .
-    - {type: held}
-    - CANCEL
-    - {type: trans}
-    - {type: trans}
   Navigation:
     - {type: trans}
     - {type: trans}
@@ -210,6 +140,76 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: held}
+  Num:
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '7'
+    - '8'
+    - '9'
+    - ','
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '4'
+    - '5'
+    - '6'
+    - '0'
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - .
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Sys:
+    - {t: Mac, h: toggle}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - BT CLR
+    - {t: BT, h: '0'}
+    - {t: BT, h: '1'}
+    - {t: BT, h: '2'}
+    - {t: BT, h: '3'}
+    - Boot
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Boot
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
   WM:
     - {type: trans}
     - {type: trans}
@@ -245,41 +245,6 @@ layers:
     - {type: trans}
     - Sft+Alt+;
     - {type: trans}
-  Sys:
-    - {t: Mac, h: toggle}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - BT CLR ALL
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - BT CLR
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - Boot
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - {type: trans}
-    - OUT BLE
-    - OUT USB
-    - {type: trans}
-    - Boot
-    - {type: held}
-    - {type: trans}
-    - {type: trans}
-    - {type: held}
   Combos:
     - ''
     - ''

@@ -16,7 +16,6 @@ parse_config:
   layer_legend_map:
     default: Default
     default_layer_mac: Mac
-    symbols: Sym
     num: Num
     navigation: Nav
     fn: Fn
@@ -269,7 +268,6 @@ draw_config:
 
     .keypos-20 text.hold,
     .keypos-30 text.hold,
-    .keypos-32 text.hold,
     .keypos-33 text.hold {
         font-size: 12px;
         text-decoration: underline;
@@ -350,7 +348,6 @@ draw_config:
     .keypos-30 text.tap { fill: #c35f2e; }
     .keypos-30 text.hold { fill: #b57614; }
     .keypos-31 text.hold { fill: #2d353b; }
-    .keypos-32 text.hold { fill: #a05a9f; }
     .keypos-33 text.hold { fill: #3f8f8a; }
 
     @media (prefers-color-scheme: dark) {
