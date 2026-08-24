@@ -35,41 +35,6 @@ layers:
     - {t: Magic, h: Shift}
     - Spc
     - {t: Enter, h: Fn}
-  Mac:
-    - Q
-    - W
-    - E
-    - R
-    - T
-    - Y
-    - U
-    - I
-    - O
-    - P
-    - {t: A, h: Ctrl}
-    - {t: S, h: Alt}
-    - {t: D, h: Gui}
-    - {t: F, h: Shift}
-    - G
-    - H
-    - {t: J, h: Shift}
-    - {t: K, h: Gui}
-    - {t: L, h: Alt}
-    - {t: '''', h: Ctrl}
-    - {t: Z, h: WM}
-    - X
-    - C
-    - V
-    - B
-    - N
-    - M
-    - {t: ',', s: ;}
-    - {t: ., s: ':'}
-    - /
-    - {t: Smart Num, h: Nav}
-    - {t: Magic, h: Shift}
-    - Spc
-    - {t: Enter, h: Fn}
   Navigation:
     - {type: trans}
     - {type: trans}
@@ -347,13 +312,19 @@ combos:
       - Combos
   - p: [12, 13]
     k: Leader
-    l:
-      - Combos
+    l: [Combos]
+  - p: [12, 13]
+    k: '&leader_mac'
+    l: [Combos]
+    hidden: true
   - p: [31, 12, 13]
     k: Sel Line
+    l: [Combos]
     draw_separate: true
-    l:
-      - Combos
+  - p: [31, 12, 13]
+    k: '&select_line_mac'
+    l: [Combos]
+    hidden: true
   - p: [11, 12, 13]
     k: Alt
     l: [Combos]
