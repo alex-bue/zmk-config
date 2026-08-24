@@ -209,7 +209,7 @@
 
         navigation_layer {
             bindings = <
-            &trans         &trans      &trans     &swapper    &trans              &kp HOME   &kp PG_DN &kp PG_UP  &kp BSPC    &kp DEL
+            &trans         &trans      &kp LS(TAB) &swapper   &trans              &kp HOME   &kp PG_DN &kp PG_UP  &kp BSPC    &kp DEL
             &kp LCTRL      &kp LALT    &kp LGUI   &kp LSHFT   &trans              &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp BSPC
             &td_bootloader &trans      &trans     &trans      &trans              &kp END    &trans    &trans     &trans      &trans
                                                   &trans      &trans              &trans     &trans

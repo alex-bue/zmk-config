@@ -143,8 +143,8 @@ layers:
   navigation:
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-    - '&swapper'
+    - PWin
+    - NWin
     - {type: trans}
     - Home
     - PgDn
