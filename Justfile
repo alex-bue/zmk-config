@@ -42,6 +42,19 @@ _build_single board shield snippet artifact cmake_args *west_args:
         cp "$build_dir/zephyr/zmk.bin" "{{ out }}/$artifact.bin"
     fi
 
+# Flash firmware for one board + shield combination.
+_flash_single board shield artifact:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    board="{{ board }}"
+    shield="{{ shield }}"
+    artifact="{{ artifact }}"
+    artifact="${artifact:-${shield:+${shield// /+}-}${board//\//_}}"
+    build_dir="{{ build }}/$artifact"
+
+    echo "Flashing firmware for $artifact..."
+    west flash -d "$build_dir"
+
 # List build targets.
 [group("build & draw")]
 list:
@@ -60,6 +73,19 @@ build expr *west_args:
 
     echo "$targets" | while IFS=, read -r board shield snippet artifact cmake_args; do
         just _build_single "$board" "$shield" "$snippet" "$artifact" "$cmake_args" {{ west_args }}
+    done
+
+# Build and flash firmware for targets matching <expr>.
+[group("build & draw")]
+flash expr: (build expr)
+    #!/usr/bin/env bash
+    set -euo pipefail
+    targets=$(just _parse_targets {{ expr }})
+
+    [[ -z "$targets" ]] && echo "No matching targets found. Aborting..." >&2 && exit 1
+
+    echo "$targets" | while IFS=, read -r board shield snippet artifact cmake_args; do
+        just _flash_single "$board" "$shield" "$artifact"
     done
 
 # Generate the committed keymap drawer artifacts from config/base.keymap.
