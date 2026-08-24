@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: base}
 layers:
-  default:
+  Default:
     - Q
     - W
     - E
@@ -21,7 +21,7 @@ layers:
     - {t: K, h: Gui}
     - {t: L, h: Alt}
     - {t: '''', h: Ctrl}
-    - {t: Z, h: wm}
+    - {t: Z, h: WM}
     - X
     - C
     - V
@@ -31,11 +31,11 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-    - {t: Smart-Num, h: navigation}
+    - {t: Smart Num, h: Nav}
     - {t: Magic, h: Shift}
-    - {t: Spc, h: symbols}
-    - {t: Enter, h: fn}
-  default_layer_mac:
+    - {t: Spc, h: Sym}
+    - {t: Enter, h: Fn}
+  Mac:
     - Q
     - W
     - E
@@ -56,7 +56,7 @@ layers:
     - {t: K, h: Gui}
     - {t: L, h: Alt}
     - {t: '''', h: Ctrl}
-    - {t: Z, h: wm}
+    - {t: Z, h: WM}
     - X
     - C
     - V
@@ -66,11 +66,11 @@ layers:
     - {t: ',', s: ;}
     - {t: ., s: ':'}
     - /
-    - {t: Smart-Num, h: navigation}
+    - {t: Smart Num, h: Nav}
     - {t: Magic, h: Shift}
-    - {t: Spc, h: symbols}
-    - {t: Enter, h: fn}
-  symbols:
+    - {t: Spc, h: Sym}
+    - {t: Enter, h: Fn}
+  Symbols:
     - {type: trans}
     - <
     - '>'
@@ -105,7 +105,7 @@ layers:
     - {type: trans}
     - {type: held}
     - {type: trans}
-  num:
+  Num:
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -136,11 +136,11 @@ layers:
     - '2'
     - '3'
     - .
-    - {type: trans}
+    - {type: held}
     - CANCEL
     - {type: trans}
     - {type: trans}
-  navigation:
+  Navigation:
     - {type: trans}
     - {type: trans}
     - PWin
@@ -161,7 +161,7 @@ layers:
     - ↑
     - →
     - Bspc
-    - Tap Dance Boot
+    - Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -171,11 +171,11 @@ layers:
     - {type: trans}
     - {type: trans}
     - {type: trans}
+    - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: trans}
-    - {type: trans}
-  fn:
+  Fn:
     - F12
     - F7
     - F8
@@ -205,12 +205,12 @@ layers:
     - $$mdi:brightness-5$$
     - $$mdi:brightness-7$$
     - {type: trans}
-    - Tap Dance Boot
+    - Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
     - {type: held}
-  wm:
+  WM:
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -245,8 +245,8 @@ layers:
     - {type: trans}
     - Sft+Alt+;
     - {type: trans}
-  sys:
-    - {t: default_layer_mac, h: toggle}
+  Sys:
+    - {t: Mac, h: toggle}
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -266,7 +266,7 @@ layers:
     - {t: BT, h: '1'}
     - {t: BT, h: '2'}
     - {t: BT, h: '3'}
-    - Tap Dance Boot
+    - Boot
     - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -275,13 +275,46 @@ layers:
     - OUT BLE
     - OUT USB
     - {type: trans}
-    - Tap Dance Boot
-    - {type: trans}
+    - Boot
+    - {type: held}
     - {type: trans}
     - {type: trans}
     - {type: held}
-  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  Combos:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
 combos:
   - p: [7, 8]
     k: Bspc
@@ -352,7 +385,7 @@ combos:
     l:
       - Combos
   - p: [31, 12, 13]
-    k: '&select_line'
+    k: Sel Line
     draw_separate: true
     l:
       - Combos
@@ -361,7 +394,7 @@ combos:
     l: [Combos]
     draw_separate: true
   - p: [21, 22]
-    k: '&copy_cut'
+    k: Copy Cut
     l: [Combos]
   - p: [21, 22]
     k: '&copy_cut_mac'
