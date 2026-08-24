@@ -94,8 +94,27 @@ draw: _check_yq_version
     #!/usr/bin/env bash
     set -euo pipefail
     keymap -c "{{ draw_dir }}/config.yaml" parse -z "{{ config }}/base.keymap" --virtual-layers Combos > "{{ draw_dir }}/base.yaml"
-    yq -Yi '.combos.[].l = ["Combos"]' "{{ draw_dir }}/base.yaml"
+    jq_expr='
+        .combos = [.combos[] | .l = ["Combos"]] |
+        .layers.num[30] = {"type": "held"} |
+        .layers.navigation[30] = {"type": "held"} |
+        .layers.sys[30] = {"type": "held"} |
+        .layers.sys[33] = {"type": "held"} |
+        .layers = {
+            Default: .layers.default,
+            Mac: .layers.default_layer_mac,
+            Symbols: .layers.symbols,
+            Num: .layers.num,
+            Navigation: .layers.navigation,
+            Fn: .layers.fn,
+            WM: .layers.wm,
+            Sys: .layers.sys,
+            Combos: .layers.Combos
+        }
+    '
+    yq -Yi "$jq_expr" "{{ draw_dir }}/base.yaml"
     keymap -c "{{ draw_dir }}/config.yaml" draw "{{ draw_dir }}/base.yaml" -k ferris/sweep > "{{ draw_dir }}/base.svg"
+    perl -0pi -e 's|(</style>\n)|$1<rect width="100%" height="100%" fill="#2d353b"/>\n|' "{{ draw_dir }}/base.svg"
 
 # Initialize the west workspace.
 [group("workspace")]

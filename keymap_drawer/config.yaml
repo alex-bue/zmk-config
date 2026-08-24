@@ -13,6 +13,15 @@ parse_config:
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle
+  layer_legend_map:
+    default: Default
+    default_layer_mac: Mac
+    symbols: Sym
+    num: Num
+    navigation: Nav
+    fn: Fn
+    sys: Sys
+    wm: WM
   mark_alternate_layer_activators: false
   trans_legend:
     tap: ""
@@ -21,16 +30,19 @@ parse_config:
   raw_binding_map:
     "&td_reset": { t: "td_reset" }
     "&bootloader": Boot
-    "&td_bootloader": Tap Dance Boot
+    "&td_bootloader": Boot
     "&caps_word": Caps Word
     "&leader": Leader
-    "&smart_num": { "t": Smart-Num, "h": "navigation" }
+    "&select_line": Sel Line
+    "&tog BASE_MAC": { "t": Mac, "h": toggle }
+    "&smart_num": { "t": Smart Num, "h": Nav }
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&kp LS(TAB)": PWin
     "&swapper": NWin
     "&kp LC(INS)": Copy
     "&kp LC(X)": Cut
     "&kp LS(INS)": Paste
+    "&copy_cut": Copy Cut
 
     "&lpar_lt": { "t": "(", "right": "<" }
     "&rpar_gt": { "t": ")", "right": ">" }
@@ -164,25 +176,212 @@ draw_config:
 
   dark_mode: false
   append_colon_to_layer_header: false
+  shrink_wide_legends: 6
+  glyph_tap_size: 15
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
 
-  svg_extra_style: |
-    rect.key {
-        fill: #f6f8fa;
-        stroke: none;      /* Remove border */
-        stroke-width: 0;   /* Border width */
+  svg_style: |
+    svg path { fill: inherit; }
+
+    svg.keymap {
+        fill: #2d353b;
+        background: #2d353b;
+        background-color: #2d353b;
+        font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Liberation Mono", monospace;
+        font-size: 15px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
     }
 
-    rect.key, rect.combo {
+    rect.key {
+        fill: #d3c6aa;
         stroke: none;
         stroke-width: 0;
     }
 
+    rect.key, rect.combo, rect.combo-separate {
+        stroke: none;
+        stroke-width: 0;
+    }
+
+    rect.combo, rect.combo-separate {
+        fill: #d3c6aa;
+        opacity: 0.78;
+    }
+
     rect.held, rect.combo.held {
-        fill: #fdd;
+        fill: #e69875;
     }
 
     text {
         text-anchor: middle;
         dominant-baseline: middle;
-        // text-transform: lowercase;
+        letter-spacing: 0;
+    }
+
+    text.tap {
+        font-weight: 600;
+    }
+
+    text.hold {
+        font-weight: 500;
+    }
+
+    text.combo, text.hold, text.shifted, text.left, text.right, text.tl, text.tr, text.bl, text.br {
+        font-size: 10px;
+    }
+
+    text.combo {
+        fill: #2d353b;
+        font-weight: 600;
+    }
+
+    text.hold, text.bl, text.br {
+        text-anchor: middle;
+        dominant-baseline: auto;
+    }
+
+    text.shifted, text.tl, text.tr {
+        text-anchor: middle;
+        dominant-baseline: hanging;
+    }
+
+    text.left, text.tl, text.bl {
+        text-anchor: start;
+    }
+
+    text.right, text.tr, text.br {
+        text-anchor: end;
+    }
+
+    text.layer-activator {
+        text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+    }
+
+    text.layer-activator tspan {
+        text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+    }
+
+    .keypos-20 text.hold,
+    .keypos-30 text.hold,
+    .keypos-32 text.hold,
+    .keypos-33 text.hold {
+        font-size: 12px;
+        text-decoration: underline;
+        text-decoration-thickness: 1.5px;
+        text-underline-offset: 2px;
+    }
+
+    text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right {
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    text.label, text.footer {
+        fill: #d3c6aa;
+        stroke: #2d353b;
+        stroke-width: 4;
+        paint-order: stroke;
+    }
+
+    text.label {
+        font-weight: 700;
+        text-anchor: start;
+    }
+
+    text.footer {
+        text-anchor: end;
+        dominant-baseline: auto;
+    }
+
+    text.trans {
+        fill: #7a8478;
+    }
+
+    path.combo {
+        stroke: #d3c6aa;
+        stroke-width: 2;
+        stroke-dasharray: 2, 3;
+        opacity: 0.35;
+        fill: none;
+    }
+
+    .layer-Combos rect.key {
+        fill: #9da497;
+        opacity: 0.22;
+    }
+
+    .layer-Combos rect.key.held {
+        fill: #e69875;
+        opacity: 1;
+    }
+
+    .layer-Combos rect.combo,
+    .layer-Combos rect.combo-separate {
+        fill: #d3c6aa;
+        opacity: 0.82;
+    }
+
+    .layer-Combos text.key {
+        opacity: 0;
+    }
+
+    .layer-Combos text.combo {
+        fill: #2d353b;
+        opacity: 1;
+    }
+
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: 2;
+    }
+
+    .icon-tabler > path[stroke="none"][fill="none"] {
+        visibility: hidden;
+    }
+
+    .keypos-20 text.hold { fill: #6f9f4a; }
+    .keypos-30 text.tap { fill: #c35f2e; }
+    .keypos-30 text.hold { fill: #b57614; }
+    .keypos-31 text.hold { fill: #2d353b; }
+    .keypos-32 text.hold { fill: #a05a9f; }
+    .keypos-33 text.hold { fill: #3f8f8a; }
+
+    @media (prefers-color-scheme: dark) {
+        svg.keymap {
+            fill: #2d353b;
+            background: #2d353b;
+            background-color: #2d353b;
+        }
+
+        rect.key {
+            fill: #d3c6aa;
+        }
+
+        rect.combo, rect.combo-separate {
+            fill: #d3c6aa;
+        }
+
+        rect.held, rect.combo.held {
+            fill: #e69875;
+        }
+
+        text.label, text.footer {
+            fill: #d3c6aa;
+            stroke: #2d353b;
+        }
+
+        text.trans {
+            fill: #7a8478;
+        }
+
+        path.combo {
+            stroke: #d3c6aa;
+        }
     }
