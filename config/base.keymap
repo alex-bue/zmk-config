@@ -81,6 +81,14 @@
             bindings = <&mo>, <&num_word>; 
         };
 
+        // Alt+Tab swapper, requires tri-state module.
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <LT2 RT2 RM1 RM2 RM3>;
+        };
+
         // Tap: comma | Shift: semicolon | Ctrl+Shift: <
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
@@ -201,7 +209,7 @@
 
         navigation_layer {
             bindings = <
-            &kp LA(N1)     &kp LA(N2)  &kp LA(N3) &kp LA(N4)  &kp LA(N5)          &kp HOME   &kp PG_DN &kp PG_UP  &kp BSPC    &kp DEL
+            &trans         &trans      &kp LS(TAB) &swapper   &trans              &kp HOME   &kp PG_DN &kp PG_UP  &kp BSPC    &kp DEL
             &kp LCTRL      &kp LALT    &kp LGUI   &kp LSHFT   &trans              &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT   &kp BSPC
             &td_bootloader &trans      &trans     &trans      &trans              &kp END    &trans    &trans     &trans      &trans
                                                   &trans      &trans              &trans     &trans
