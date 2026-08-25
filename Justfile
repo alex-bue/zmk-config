@@ -102,7 +102,6 @@ draw: _check_yq_version
         .layers.sys[33] = {"type": "held"} |
         .layers = {
             Default: .layers.default,
-            Mac: .layers.default_layer_mac,
             Navigation: .layers.navigation,
             Fn: .layers.fn,
             Num: .layers.num,

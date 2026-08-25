@@ -15,7 +15,6 @@ parse_config:
   tap_toggle_label: tap-toggle
   layer_legend_map:
     default: Default
-    default_layer_mac: Mac
     num: Num
     navigation: Nav
     fn: Fn
@@ -33,7 +32,7 @@ parse_config:
     "&caps_word": Caps Word
     "&leader": Leader
     "&select_line": Sel Line
-    "&tog BASE_MAC": { "t": Mac, "h": toggle }
+    "&tog HOST_MAC": { "t": Mac, "h": toggle }
     "&smart_num": { "t": Smart Num, "h": Nav }
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&kp LS(TAB)": PWin
@@ -54,6 +53,8 @@ parse_config:
     combo_copy_mac: { hidden: true }
     combo_paste_mac: { hidden: true }
     combo_cut_mac: { hidden: true }
+    combo_leader_mac: { hidden: true }
+    combo_select_line_mac: { hidden: true }
 
     combo_caps_word: { align: top, o: 1.15 }
     combo_alt: { draw_separate: true }

@@ -9,5 +9,107 @@
                 <&macro_tap &kp END>,
                 <&macro_release &kp LSHFT>;
         };
+
+        select_line_mac: select_line_mac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LG(LEFT)>,
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &kp LG(RIGHT)>,
+                <&macro_release &kp LSHFT>;
+        };
+
+        de_ae_mac_lower: de_ae_mac_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp A>;
+        };
+
+        de_ae_mac_upper: de_ae_mac_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp LS(A)>;
+        };
+
+        de_oe_mac_lower: de_oe_mac_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp O>;
+        };
+
+        de_oe_mac_upper: de_oe_mac_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp LS(O)>;
+        };
+
+        de_ue_mac_lower: de_ue_mac_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp U>;
+        };
+
+        de_ue_mac_upper: de_ue_mac_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LA(U)>,
+                <&macro_tap &kp LS(U)>;
+        };
+
+        de_eszett_mac_lower: de_eszett_mac_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LA(S)>;
+        };
+
+        de_eszett_mac_upper: de_eszett_mac_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LA(S)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        de_ae_mac: de_ae_mac {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&de_ae_mac_lower>, <&de_ae_mac_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_oe_mac: de_oe_mac {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&de_oe_mac_lower>, <&de_oe_mac_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_ue_mac: de_ue_mac {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&de_ue_mac_lower>, <&de_ue_mac_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_eszett_mac: de_eszett_mac {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&de_eszett_mac_lower>, <&de_eszett_mac_upper>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 };
